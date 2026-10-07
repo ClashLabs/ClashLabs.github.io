@@ -1,0 +1,3775 @@
+{
+ "games_analyzed": 182611,
+ "cards": {
+  "Zap": {
+   "games": 24928,
+   "wr": 57.8,
+   "elixir": 2,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Dark Prince": {
+   "games": 8714,
+   "wr": 57.4,
+   "elixir": 4,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Goblin Cage": {
+   "games": 5762,
+   "wr": 57.5,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Spirit Empress": {
+   "games": 3941,
+   "wr": 55.3,
+   "elixir": 6,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Baby Dragon": {
+   "games": 12107,
+   "wr": 57.6,
+   "elixir": 4,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Berserker": {
+   "games": 26989,
+   "wr": 57.7,
+   "elixir": 2,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Fireball": {
+   "games": 49729,
+   "wr": 59.1,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Lava Hound": {
+   "games": 7481,
+   "wr": 56.4,
+   "elixir": 7,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "P.E.K.K.A": {
+   "games": 2718,
+   "wr": 61.4,
+   "elixir": 7,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Golden Knight": {
+   "games": 18443,
+   "wr": 59.5,
+   "elixir": 4,
+   "rarity": "champion",
+   "evo_capable": false,
+   "champion": true
+  },
+  "Giant Snowball": {
+   "games": 18459,
+   "wr": 55.8,
+   "elixir": 2,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Mother Witch": {
+   "games": 28373,
+   "wr": 59.6,
+   "elixir": 4,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Arrows": {
+   "games": 20631,
+   "wr": 58.7,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Electro Wizard": {
+   "games": 9936,
+   "wr": 61.1,
+   "elixir": 4,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Skeleton Dragons": {
+   "games": 9776,
+   "wr": 55.3,
+   "elixir": 4,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Hog Rider": {
+   "games": 14963,
+   "wr": 57.8,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Magic Archer": {
+   "games": 10452,
+   "wr": 56.4,
+   "elixir": 4,
+   "rarity": "legendary",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Tesla": {
+   "games": 20028,
+   "wr": 57.6,
+   "elixir": 4,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Goblin Drill": {
+   "games": 9729,
+   "wr": 56.6,
+   "elixir": 4,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Knight": {
+   "games": 12480,
+   "wr": 60.1,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Poison": {
+   "games": 25093,
+   "wr": 58.3,
+   "elixir": 4,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Fire Spirit": {
+   "games": 18152,
+   "wr": 55.8,
+   "elixir": 1,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Goblin Barrel": {
+   "games": 11201,
+   "wr": 57.9,
+   "elixir": 3,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Boss Bandit": {
+   "games": 4827,
+   "wr": 54.9,
+   "elixir": 6,
+   "rarity": "champion",
+   "evo_capable": false,
+   "champion": true
+  },
+  "Dart Goblin": {
+   "games": 9829,
+   "wr": 58.5,
+   "elixir": 3,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Ice Spirit": {
+   "games": 27715,
+   "wr": 57.6,
+   "elixir": 1,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Cannon": {
+   "games": 24557,
+   "wr": 58.5,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Royal Delivery": {
+   "games": 9426,
+   "wr": 56.3,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Electro Spirit": {
+   "games": 46726,
+   "wr": 58.4,
+   "elixir": 1,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Skeletons": {
+   "games": 76174,
+   "wr": 58.6,
+   "elixir": 1,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Royal Giant": {
+   "games": 13665,
+   "wr": 56.3,
+   "elixir": 6,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Phoenix": {
+   "games": 3810,
+   "wr": 58.5,
+   "elixir": 4,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Lightning": {
+   "games": 23658,
+   "wr": 58.9,
+   "elixir": 6,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "The Log": {
+   "games": 27949,
+   "wr": 58.3,
+   "elixir": 2,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Heal Spirit": {
+   "games": 9539,
+   "wr": 60.4,
+   "elixir": 1,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Bomber": {
+   "games": 14297,
+   "wr": 56.5,
+   "elixir": 2,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Hunter": {
+   "games": 12495,
+   "wr": 57.3,
+   "elixir": 4,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Ice Golem": {
+   "games": 4344,
+   "wr": 60.1,
+   "elixir": 2,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Royal Ghost": {
+   "games": 32328,
+   "wr": 59.0,
+   "elixir": 3,
+   "rarity": "legendary",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Three Musketeers": {
+   "games": 2400,
+   "wr": 58.5,
+   "elixir": 9,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Ram Rider": {
+   "games": 2465,
+   "wr": 58.0,
+   "elixir": 5,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Barbarian Barrel": {
+   "games": 76738,
+   "wr": 59.4,
+   "elixir": 2,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Skeleton Barrel": {
+   "games": 8568,
+   "wr": 61.1,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Goblins": {
+   "games": 7421,
+   "wr": 58.5,
+   "elixir": 2,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Mortar": {
+   "games": 14930,
+   "wr": 60.4,
+   "elixir": 4,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Ronin": {
+   "games": 12596,
+   "wr": 57.7,
+   "elixir": 5,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Rascals": {
+   "games": 7060,
+   "wr": 60.8,
+   "elixir": 5,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Princess": {
+   "games": 6969,
+   "wr": 57.8,
+   "elixir": 3,
+   "rarity": "legendary",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Goblin Hut": {
+   "games": 14350,
+   "wr": 59.3,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Furnace": {
+   "games": 11835,
+   "wr": 59.2,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Rocket": {
+   "games": 6036,
+   "wr": 58.1,
+   "elixir": 6,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Archers": {
+   "games": 16585,
+   "wr": 58.6,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Witch": {
+   "games": 3191,
+   "wr": 61.6,
+   "elixir": 5,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Bowler": {
+   "games": 7916,
+   "wr": 60.5,
+   "elixir": 5,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Graveyard": {
+   "games": 12122,
+   "wr": 58.3,
+   "elixir": 5,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Minions": {
+   "games": 12655,
+   "wr": 59.9,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Mini P.E.K.K.A": {
+   "games": 2745,
+   "wr": 60.8,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Giant": {
+   "games": 7820,
+   "wr": 57.8,
+   "elixir": 5,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Executioner": {
+   "games": 6964,
+   "wr": 59.5,
+   "elixir": 5,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Balloon": {
+   "games": 5075,
+   "wr": 56.6,
+   "elixir": 5,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Miner": {
+   "games": 14282,
+   "wr": 57.1,
+   "elixir": 3,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Giant Skeleton": {
+   "games": 11247,
+   "wr": 60.1,
+   "elixir": 6,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Tornado": {
+   "games": 12224,
+   "wr": 58.8,
+   "elixir": 3,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Tombstone": {
+   "games": 12052,
+   "wr": 55.4,
+   "elixir": 3,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Musketeer": {
+   "games": 8735,
+   "wr": 59.3,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Royal Hogs": {
+   "games": 18024,
+   "wr": 59.2,
+   "elixir": 5,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Mighty Miner": {
+   "games": 9847,
+   "wr": 57.8,
+   "elixir": 4,
+   "rarity": "champion",
+   "evo_capable": false,
+   "champion": true
+  },
+  "Lumberjack": {
+   "games": 4987,
+   "wr": 57.2,
+   "elixir": 4,
+   "rarity": "legendary",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Mega Knight": {
+   "games": 4543,
+   "wr": 58.3,
+   "elixir": 7,
+   "rarity": "legendary",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Earthquake": {
+   "games": 8572,
+   "wr": 57.9,
+   "elixir": 3,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Zappies": {
+   "games": 18650,
+   "wr": 59.5,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Monk": {
+   "games": 4169,
+   "wr": 52.7,
+   "elixir": 5,
+   "rarity": "champion",
+   "evo_capable": false,
+   "champion": true
+  },
+  "Fisherman": {
+   "games": 12766,
+   "wr": 56.8,
+   "elixir": 3,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Bomb Tower": {
+   "games": 21227,
+   "wr": 57.7,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Wall Breakers": {
+   "games": 14130,
+   "wr": 56.2,
+   "elixir": 2,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Goblin Demolisher": {
+   "games": 8355,
+   "wr": 58.8,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Rage": {
+   "games": 7367,
+   "wr": 57.7,
+   "elixir": 2,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Valkyrie": {
+   "games": 18262,
+   "wr": 57.7,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Wizard": {
+   "games": 11836,
+   "wr": 59.4,
+   "elixir": 5,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "X-Bow": {
+   "games": 5437,
+   "wr": 56.0,
+   "elixir": 6,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Elixir Collector": {
+   "games": 5388,
+   "wr": 55.3,
+   "elixir": 6,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Battle Ram": {
+   "games": 20610,
+   "wr": 60.4,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Guards": {
+   "games": 5082,
+   "wr": 56.5,
+   "elixir": 3,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Bandit": {
+   "games": 11016,
+   "wr": 60.7,
+   "elixir": 3,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Firecracker": {
+   "games": 7116,
+   "wr": 59.0,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Vines": {
+   "games": 13662,
+   "wr": 59.4,
+   "elixir": 3,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Goblinstein": {
+   "games": 23753,
+   "wr": 60.1,
+   "elixir": 5,
+   "rarity": "champion",
+   "evo_capable": false,
+   "champion": true
+  },
+  "Archer Queen": {
+   "games": 4856,
+   "wr": 56.0,
+   "elixir": 5,
+   "rarity": "champion",
+   "evo_capable": false,
+   "champion": true
+  },
+  "Bats": {
+   "games": 14831,
+   "wr": 58.8,
+   "elixir": 2,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Cannon Cart": {
+   "games": 11611,
+   "wr": 60.3,
+   "elixir": 5,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Skeleton Army": {
+   "games": 6336,
+   "wr": 59.6,
+   "elixir": 3,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Inferno Dragon": {
+   "games": 11516,
+   "wr": 59.1,
+   "elixir": 4,
+   "rarity": "legendary",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Inferno Tower": {
+   "games": 1577,
+   "wr": 55.7,
+   "elixir": 5,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Goblin Gang": {
+   "games": 5169,
+   "wr": 58.6,
+   "elixir": 3,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Spear Goblins": {
+   "games": 2124,
+   "wr": 60.5,
+   "elixir": 2,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Royal Recruits": {
+   "games": 1134,
+   "wr": 59.4,
+   "elixir": 7,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Flying Machine": {
+   "games": 1964,
+   "wr": 60.4,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Mirror": {
+   "games": 587,
+   "wr": 61.5,
+   "elixir": null,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Golem": {
+   "games": 5666,
+   "wr": 57.5,
+   "elixir": 8,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Night Witch": {
+   "games": 2823,
+   "wr": 61.0,
+   "elixir": 4,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Freeze": {
+   "games": 7565,
+   "wr": 58.6,
+   "elixir": 4,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Prince": {
+   "games": 3855,
+   "wr": 57.1,
+   "elixir": 5,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Elite Barbarians": {
+   "games": 20769,
+   "wr": 58.9,
+   "elixir": 6,
+   "rarity": "common",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Suspicious Bush": {
+   "games": 4330,
+   "wr": 60.6,
+   "elixir": 2,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Rune Giant": {
+   "games": 16522,
+   "wr": 58.3,
+   "elixir": 4,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Barbarian Hut": {
+   "games": 506,
+   "wr": 64.4,
+   "elixir": 6,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Mega Minion": {
+   "games": 6299,
+   "wr": 56.1,
+   "elixir": 3,
+   "rarity": "rare",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Minion Horde": {
+   "games": 7982,
+   "wr": 58.7,
+   "elixir": 5,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Electro Dragon": {
+   "games": 444,
+   "wr": 62.6,
+   "elixir": 5,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Void": {
+   "games": 4026,
+   "wr": 51.7,
+   "elixir": 5,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Little Prince": {
+   "games": 9311,
+   "wr": 60.3,
+   "elixir": 3,
+   "rarity": "champion",
+   "evo_capable": false,
+   "champion": true
+  },
+  "Goblin Curse": {
+   "games": 1817,
+   "wr": 61.5,
+   "elixir": 2,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Electro Giant": {
+   "games": 2542,
+   "wr": 59.6,
+   "elixir": 7,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Skeleton King": {
+   "games": 1401,
+   "wr": 59.2,
+   "elixir": 4,
+   "rarity": "champion",
+   "evo_capable": false,
+   "champion": true
+  },
+  "Goblin Giant": {
+   "games": 1239,
+   "wr": 59.2,
+   "elixir": 6,
+   "rarity": "epic",
+   "evo_capable": true,
+   "champion": false
+  },
+  "Ice Wizard": {
+   "games": 10192,
+   "wr": 60.4,
+   "elixir": 3,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Goblin Machine": {
+   "games": 223,
+   "wr": 65.9,
+   "elixir": 5,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Elixir Golem": {
+   "games": 1003,
+   "wr": 64.6,
+   "elixir": 3,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Sparky": {
+   "games": 773,
+   "wr": 56.9,
+   "elixir": 6,
+   "rarity": "legendary",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Clone": {
+   "games": 261,
+   "wr": 56.7,
+   "elixir": 3,
+   "rarity": "epic",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Minion Giant": {
+   "games": 17028,
+   "wr": 63.3,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Battle Healer": {
+   "games": 383,
+   "wr": 66.6,
+   "elixir": 4,
+   "rarity": "rare",
+   "evo_capable": false,
+   "champion": false
+  },
+  "Barbarians": {
+   "games": 991,
+   "wr": 55.5,
+   "elixir": 5,
+   "rarity": "common",
+   "evo_capable": true,
+   "champion": false
+  }
+ },
+ "top_pairs": [
+  {
+   "a": "Elixir Collector",
+   "b": "Inferno Dragon",
+   "games": 100,
+   "wr": 91.0,
+   "lift": 33.8
+  },
+  {
+   "a": "Executioner",
+   "b": "Skeleton King",
+   "games": 66,
+   "wr": 90.9,
+   "lift": 31.6
+  },
+  {
+   "a": "Earthquake",
+   "b": "Minion Giant",
+   "games": 88,
+   "wr": 90.9,
+   "lift": 30.3
+  },
+  {
+   "a": "Inferno Dragon",
+   "b": "Royal Hogs",
+   "games": 65,
+   "wr": 89.2,
+   "lift": 30.0
+  },
+  {
+   "a": "Firecracker",
+   "b": "Minion Giant",
+   "games": 113,
+   "wr": 88.5,
+   "lift": 27.4
+  },
+  {
+   "a": "Executioner",
+   "b": "Goblin Curse",
+   "games": 73,
+   "wr": 87.7,
+   "lift": 27.2
+  },
+  {
+   "a": "Elixir Golem",
+   "b": "Miner",
+   "games": 65,
+   "wr": 87.7,
+   "lift": 26.9
+  },
+  {
+   "a": "Battle Ram",
+   "b": "Poison",
+   "games": 70,
+   "wr": 85.7,
+   "lift": 26.4
+  },
+  {
+   "a": "Goblin Barrel",
+   "b": "Goblin Demolisher",
+   "games": 135,
+   "wr": 84.4,
+   "lift": 26.1
+  },
+  {
+   "a": "Golden Knight",
+   "b": "Prince",
+   "games": 42,
+   "wr": 83.3,
+   "lift": 25.0
+  },
+  {
+   "a": "Musketeer",
+   "b": "Skeleton Army",
+   "games": 93,
+   "wr": 83.9,
+   "lift": 24.5
+  },
+  {
+   "a": "Goblin Barrel",
+   "b": "Goblin Giant",
+   "games": 63,
+   "wr": 82.5,
+   "lift": 24.0
+  },
+  {
+   "a": "Bomber",
+   "b": "Mirror",
+   "games": 57,
+   "wr": 82.5,
+   "lift": 23.5
+  },
+  {
+   "a": "Inferno Dragon",
+   "b": "Witch",
+   "games": 173,
+   "wr": 83.8,
+   "lift": 23.4
+  },
+  {
+   "a": "Rage",
+   "b": "Tornado",
+   "games": 54,
+   "wr": 81.5,
+   "lift": 23.2
+  },
+  {
+   "a": "Spirit Empress",
+   "b": "Witch",
+   "games": 93,
+   "wr": 81.7,
+   "lift": 23.2
+  },
+  {
+   "a": "P.E.K.K.A",
+   "b": "Poison",
+   "games": 139,
+   "wr": 82.7,
+   "lift": 22.9
+  },
+  {
+   "a": "Mirror",
+   "b": "Spirit Empress",
+   "games": 75,
+   "wr": 81.3,
+   "lift": 22.9
+  },
+  {
+   "a": "Bomber",
+   "b": "Magic Archer",
+   "games": 43,
+   "wr": 79.1,
+   "lift": 22.6
+  },
+  {
+   "a": "Royal Hogs",
+   "b": "Skeleton Barrel",
+   "games": 122,
+   "wr": 82.8,
+   "lift": 22.6
+  },
+  {
+   "a": "Goblin Cage",
+   "b": "Spear Goblins",
+   "games": 53,
+   "wr": 81.1,
+   "lift": 22.1
+  },
+  {
+   "a": "Bats",
+   "b": "Flying Machine",
+   "games": 89,
+   "wr": 80.9,
+   "lift": 21.3
+  },
+  {
+   "a": "Poison",
+   "b": "Suspicious Bush",
+   "games": 128,
+   "wr": 80.5,
+   "lift": 21.0
+  },
+  {
+   "a": "Giant",
+   "b": "Skeleton Dragons",
+   "games": 49,
+   "wr": 77.6,
+   "lift": 21.0
+  },
+  {
+   "a": "Barbarians",
+   "b": "The Log",
+   "games": 63,
+   "wr": 77.8,
+   "lift": 20.9
+  },
+  {
+   "a": "Barbarians",
+   "b": "Princess",
+   "games": 44,
+   "wr": 77.3,
+   "lift": 20.6
+  },
+  {
+   "a": "Fire Spirit",
+   "b": "Goblin Gang",
+   "games": 49,
+   "wr": 77.6,
+   "lift": 20.4
+  },
+  {
+   "a": "Bats",
+   "b": "Lumberjack",
+   "games": 109,
+   "wr": 78.0,
+   "lift": 20.0
+  },
+  {
+   "a": "Goblin Barrel",
+   "b": "Goblin Drill",
+   "games": 96,
+   "wr": 77.1,
+   "lift": 19.8
+  },
+  {
+   "a": "Barbarian Barrel",
+   "b": "Skeleton Army",
+   "games": 179,
+   "wr": 79.3,
+   "lift": 19.8
+  },
+  {
+   "a": "Poison",
+   "b": "Royal Hogs",
+   "games": 176,
+   "wr": 78.4,
+   "lift": 19.7
+  },
+  {
+   "a": "Goblin Demolisher",
+   "b": "Golem",
+   "games": 120,
+   "wr": 77.5,
+   "lift": 19.4
+  },
+  {
+   "a": "Mirror",
+   "b": "Witch",
+   "games": 89,
+   "wr": 80.9,
+   "lift": 19.4
+  },
+  {
+   "a": "Inferno Dragon",
+   "b": "Skeleton Barrel",
+   "games": 102,
+   "wr": 79.4,
+   "lift": 19.3
+  },
+  {
+   "a": "Goblin Barrel",
+   "b": "Witch",
+   "games": 76,
+   "wr": 78.9,
+   "lift": 19.2
+  },
+  {
+   "a": "Miner",
+   "b": "Skeleton King",
+   "games": 101,
+   "wr": 77.2,
+   "lift": 19.0
+  },
+  {
+   "a": "Golem",
+   "b": "Mirror",
+   "games": 88,
+   "wr": 78.4,
+   "lift": 18.9
+  },
+  {
+   "a": "Royal Hogs",
+   "b": "Spear Goblins",
+   "games": 66,
+   "wr": 78.8,
+   "lift": 18.9
+  },
+  {
+   "a": "Bandit",
+   "b": "Skeleton Barrel",
+   "games": 133,
+   "wr": 79.7,
+   "lift": 18.8
+  },
+  {
+   "a": "Golden Knight",
+   "b": "Witch",
+   "games": 101,
+   "wr": 79.2,
+   "lift": 18.7
+  },
+  {
+   "a": "Goblin Drill",
+   "b": "Skeleton Barrel",
+   "games": 89,
+   "wr": 77.5,
+   "lift": 18.6
+  },
+  {
+   "a": "Giant",
+   "b": "Inferno Dragon",
+   "games": 178,
+   "wr": 77.0,
+   "lift": 18.5
+  },
+  {
+   "a": "Executioner",
+   "b": "Skeleton Army",
+   "games": 163,
+   "wr": 77.9,
+   "lift": 18.4
+  },
+  {
+   "a": "Goblin Barrel",
+   "b": "Poison",
+   "games": 149,
+   "wr": 76.5,
+   "lift": 18.4
+  },
+  {
+   "a": "Bandit",
+   "b": "Suspicious Bush",
+   "games": 134,
+   "wr": 79.1,
+   "lift": 18.4
+  },
+  {
+   "a": "Executioner",
+   "b": "Night Witch",
+   "games": 162,
+   "wr": 78.4,
+   "lift": 18.2
+  },
+  {
+   "a": "Baby Dragon",
+   "b": "Bats",
+   "games": 106,
+   "wr": 76.4,
+   "lift": 18.2
+  },
+  {
+   "a": "Furnace",
+   "b": "Goblin Barrel",
+   "games": 98,
+   "wr": 76.5,
+   "lift": 18.0
+  },
+  {
+   "a": "Barbarian Hut",
+   "b": "Skeleton Army",
+   "games": 65,
+   "wr": 80.0,
+   "lift": 18.0
+  },
+  {
+   "a": "Electro Spirit",
+   "b": "Spear Goblins",
+   "games": 115,
+   "wr": 77.4,
+   "lift": 18.0
+  },
+  {
+   "a": "Bandit",
+   "b": "Graveyard",
+   "games": 93,
+   "wr": 77.4,
+   "lift": 17.9
+  },
+  {
+   "a": "Goblin Drill",
+   "b": "Inferno Dragon",
+   "games": 99,
+   "wr": 75.8,
+   "lift": 17.9
+  },
+  {
+   "a": "Barbarian Barrel",
+   "b": "The Log",
+   "games": 133,
+   "wr": 76.7,
+   "lift": 17.9
+  },
+  {
+   "a": "Dart Goblin",
+   "b": "Furnace",
+   "games": 69,
+   "wr": 76.8,
+   "lift": 17.9
+  },
+  {
+   "a": "Barbarians",
+   "b": "Goblin Barrel",
+   "games": 51,
+   "wr": 74.5,
+   "lift": 17.8
+  },
+  {
+   "a": "Electro Wizard",
+   "b": "Skeleton Barrel",
+   "games": 142,
+   "wr": 78.9,
+   "lift": 17.8
+  },
+  {
+   "a": "Electro Dragon",
+   "b": "Rage",
+   "games": 59,
+   "wr": 78.0,
+   "lift": 17.8
+  },
+  {
+   "a": "Miner",
+   "b": "Rage",
+   "games": 121,
+   "wr": 75.2,
+   "lift": 17.8
+  },
+  {
+   "a": "Goblin Demolisher",
+   "b": "Royal Hogs",
+   "games": 133,
+   "wr": 76.7,
+   "lift": 17.7
+  },
+  {
+   "a": "Archer Queen",
+   "b": "Magic Archer",
+   "games": 42,
+   "wr": 73.8,
+   "lift": 17.6
+  }
+ ],
+ "evolutions": {
+  "Royal Ghost": {
+   "evo_games": 24145,
+   "evo_wr": 59.0,
+   "solo_wr": 59.0,
+   "best_partners": [
+    {
+     "card": "Tombstone",
+     "games": 66,
+     "wr": 72.7
+    },
+    {
+     "card": "Bats",
+     "games": 72,
+     "wr": 70.8
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 741,
+     "wr": 64.5
+    },
+    {
+     "card": "Hog Rider",
+     "games": 157,
+     "wr": 64.3
+    },
+    {
+     "card": "Miner",
+     "games": 197,
+     "wr": 64.0
+    },
+    {
+     "card": "Electro Wizard",
+     "games": 2935,
+     "wr": 63.7
+    }
+   ]
+  },
+  "Battle Ram": {
+   "evo_games": 20453,
+   "evo_wr": 60.3,
+   "solo_wr": 60.4,
+   "best_partners": [
+    {
+     "card": "Poison",
+     "games": 45,
+     "wr": 82.2
+    },
+    {
+     "card": "Fisherman",
+     "games": 88,
+     "wr": 67.0
+    },
+    {
+     "card": "Furnace",
+     "games": 1788,
+     "wr": 66.1
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 231,
+     "wr": 65.8
+    },
+    {
+     "card": "Giant Snowball",
+     "games": 71,
+     "wr": 64.8
+    },
+    {
+     "card": "Magic Archer",
+     "games": 235,
+     "wr": 64.7
+    }
+   ]
+  },
+  "Elite Barbarians": {
+   "evo_games": 19774,
+   "evo_wr": 58.9,
+   "solo_wr": 58.9,
+   "best_partners": [
+    {
+     "card": "Battle Healer",
+     "games": 67,
+     "wr": 74.6
+    },
+    {
+     "card": "Sparky",
+     "games": 124,
+     "wr": 73.4
+    },
+    {
+     "card": "Elixir Golem",
+     "games": 51,
+     "wr": 68.6
+    },
+    {
+     "card": "Spear Goblins",
+     "games": 100,
+     "wr": 67.0
+    },
+    {
+     "card": "Ice Golem",
+     "games": 282,
+     "wr": 66.0
+    },
+    {
+     "card": "Rascals",
+     "games": 108,
+     "wr": 65.7
+    }
+   ]
+  },
+  "Berserker": {
+   "evo_games": 18445,
+   "evo_wr": 57.7,
+   "solo_wr": 57.7,
+   "best_partners": [
+    {
+     "card": "Ice Golem",
+     "games": 117,
+     "wr": 75.2
+    },
+    {
+     "card": "Minion Giant",
+     "games": 239,
+     "wr": 74.1
+    },
+    {
+     "card": "Goblin Curse",
+     "games": 914,
+     "wr": 64.7
+    },
+    {
+     "card": "Little Prince",
+     "games": 1235,
+     "wr": 63.5
+    },
+    {
+     "card": "Bandit",
+     "games": 52,
+     "wr": 63.5
+    },
+    {
+     "card": "Goblin Machine",
+     "games": 46,
+     "wr": 63.0
+    }
+   ]
+  },
+  "Valkyrie": {
+   "evo_games": 17302,
+   "evo_wr": 57.4,
+   "solo_wr": 57.7,
+   "best_partners": [
+    {
+     "card": "P.E.K.K.A",
+     "games": 42,
+     "wr": 69.0
+    },
+    {
+     "card": "Night Witch",
+     "games": 95,
+     "wr": 67.4
+    },
+    {
+     "card": "Goblinstein",
+     "games": 167,
+     "wr": 65.3
+    },
+    {
+     "card": "Rocket",
+     "games": 1535,
+     "wr": 64.5
+    },
+    {
+     "card": "Minion Giant",
+     "games": 938,
+     "wr": 64.5
+    },
+    {
+     "card": "Electro Wizard",
+     "games": 211,
+     "wr": 63.5
+    }
+   ]
+  },
+  "Archers": {
+   "evo_games": 16345,
+   "evo_wr": 58.4,
+   "solo_wr": 58.6,
+   "best_partners": [
+    {
+     "card": "Void",
+     "games": 42,
+     "wr": 66.7
+    },
+    {
+     "card": "Minion Giant",
+     "games": 2577,
+     "wr": 64.9
+    },
+    {
+     "card": "Goblin Cage",
+     "games": 40,
+     "wr": 62.5
+    },
+    {
+     "card": "Fisherman",
+     "games": 75,
+     "wr": 61.3
+    },
+    {
+     "card": "Golden Knight",
+     "games": 98,
+     "wr": 61.2
+    },
+    {
+     "card": "Lightning",
+     "games": 8521,
+     "wr": 60.2
+    }
+   ]
+  },
+  "Royal Hogs": {
+   "evo_games": 16338,
+   "evo_wr": 58.5,
+   "solo_wr": 59.2,
+   "best_partners": [
+    {
+     "card": "Spear Goblins",
+     "games": 66,
+     "wr": 78.8
+    },
+    {
+     "card": "Goblin Cage",
+     "games": 89,
+     "wr": 76.4
+    },
+    {
+     "card": "Giant Snowball",
+     "games": 115,
+     "wr": 74.8
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 335,
+     "wr": 68.1
+    },
+    {
+     "card": "Hunter",
+     "games": 312,
+     "wr": 65.1
+    },
+    {
+     "card": "Heal Spirit",
+     "games": 416,
+     "wr": 64.7
+    }
+   ]
+  },
+  "Skeletons": {
+   "evo_games": 16042,
+   "evo_wr": 59.5,
+   "solo_wr": 58.6,
+   "best_partners": [
+    {
+     "card": "Void",
+     "games": 43,
+     "wr": 67.4
+    },
+    {
+     "card": "Mirror",
+     "games": 91,
+     "wr": 67.0
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 1261,
+     "wr": 66.6
+    },
+    {
+     "card": "Elixir Golem",
+     "games": 65,
+     "wr": 66.2
+    },
+    {
+     "card": "Rage",
+     "games": 61,
+     "wr": 65.6
+    },
+    {
+     "card": "Minion Giant",
+     "games": 5920,
+     "wr": 64.6
+    }
+   ]
+  },
+  "Zap": {
+   "evo_games": 15807,
+   "evo_wr": 56.8,
+   "solo_wr": 57.8,
+   "best_partners": [
+    {
+     "card": "Mirror",
+     "games": 52,
+     "wr": 75.0
+    },
+    {
+     "card": "Electro Spirit",
+     "games": 122,
+     "wr": 73.0
+    },
+    {
+     "card": "Graveyard",
+     "games": 52,
+     "wr": 69.2
+    },
+    {
+     "card": "Ice Spirit",
+     "games": 60,
+     "wr": 68.3
+    },
+    {
+     "card": "Tesla",
+     "games": 122,
+     "wr": 67.2
+    },
+    {
+     "card": "Bowler",
+     "games": 66,
+     "wr": 65.2
+    }
+   ]
+  },
+  "Cannon": {
+   "evo_games": 15382,
+   "evo_wr": 59.1,
+   "solo_wr": 58.5,
+   "best_partners": [
+    {
+     "card": "Royal Ghost",
+     "games": 45,
+     "wr": 71.1
+    },
+    {
+     "card": "Baby Dragon",
+     "games": 523,
+     "wr": 66.2
+    },
+    {
+     "card": "Monk",
+     "games": 200,
+     "wr": 65.0
+    },
+    {
+     "card": "Wizard",
+     "games": 151,
+     "wr": 64.9
+    },
+    {
+     "card": "Electro Giant",
+     "games": 546,
+     "wr": 64.7
+    },
+    {
+     "card": "Lightning",
+     "games": 1048,
+     "wr": 64.5
+    }
+   ]
+  },
+  "Giant Snowball": {
+   "evo_games": 14870,
+   "evo_wr": 55.1,
+   "solo_wr": 55.8,
+   "best_partners": [
+    {
+     "card": "Golem",
+     "games": 66,
+     "wr": 77.3
+    },
+    {
+     "card": "Mirror",
+     "games": 79,
+     "wr": 75.9
+    },
+    {
+     "card": "Mini P.E.K.K.A",
+     "games": 321,
+     "wr": 70.1
+    },
+    {
+     "card": "Spirit Empress",
+     "games": 120,
+     "wr": 67.5
+    },
+    {
+     "card": "Vines",
+     "games": 120,
+     "wr": 67.5
+    },
+    {
+     "card": "Ice Golem",
+     "games": 242,
+     "wr": 64.5
+    }
+   ]
+  },
+  "Tesla": {
+   "evo_games": 14453,
+   "evo_wr": 57.8,
+   "solo_wr": 57.6,
+   "best_partners": [
+    {
+     "card": "Goblinstein",
+     "games": 592,
+     "wr": 68.8
+    },
+    {
+     "card": "Minion Giant",
+     "games": 3410,
+     "wr": 64.8
+    },
+    {
+     "card": "Rune Giant",
+     "games": 1232,
+     "wr": 63.2
+    },
+    {
+     "card": "Spirit Empress",
+     "games": 65,
+     "wr": 63.1
+    },
+    {
+     "card": "Little Prince",
+     "games": 1346,
+     "wr": 62.4
+    },
+    {
+     "card": "Tornado",
+     "games": 377,
+     "wr": 62.1
+    }
+   ]
+  },
+  "Bats": {
+   "evo_games": 13517,
+   "evo_wr": 58.8,
+   "solo_wr": 58.8,
+   "best_partners": [
+    {
+     "card": "Flying Machine",
+     "games": 76,
+     "wr": 85.5
+    },
+    {
+     "card": "Lumberjack",
+     "games": 92,
+     "wr": 83.7
+    },
+    {
+     "card": "Baby Dragon",
+     "games": 91,
+     "wr": 79.1
+    },
+    {
+     "card": "Lava Hound",
+     "games": 88,
+     "wr": 78.4
+    },
+    {
+     "card": "Skeleton Army",
+     "games": 95,
+     "wr": 77.9
+    },
+    {
+     "card": "Clone",
+     "games": 108,
+     "wr": 75.9
+    }
+   ]
+  },
+  "Mortar": {
+   "evo_games": 13443,
+   "evo_wr": 60.4,
+   "solo_wr": 60.4,
+   "best_partners": [
+    {
+     "card": "Earthquake",
+     "games": 48,
+     "wr": 68.8
+    },
+    {
+     "card": "Hog Rider",
+     "games": 134,
+     "wr": 67.9
+    },
+    {
+     "card": "Minion Giant",
+     "games": 453,
+     "wr": 65.3
+    },
+    {
+     "card": "Ice Golem",
+     "games": 49,
+     "wr": 65.3
+    },
+    {
+     "card": "Furnace",
+     "games": 188,
+     "wr": 64.9
+    },
+    {
+     "card": "Archer Queen",
+     "games": 58,
+     "wr": 63.8
+    }
+   ]
+  },
+  "Royal Giant": {
+   "evo_games": 11437,
+   "evo_wr": 55.7,
+   "solo_wr": 56.3,
+   "best_partners": [
+    {
+     "card": "Minions",
+     "games": 53,
+     "wr": 69.8
+    },
+    {
+     "card": "Furnace",
+     "games": 118,
+     "wr": 66.9
+    },
+    {
+     "card": "Electro Wizard",
+     "games": 229,
+     "wr": 62.9
+    },
+    {
+     "card": "Archers",
+     "games": 64,
+     "wr": 62.5
+    },
+    {
+     "card": "Bowler",
+     "games": 122,
+     "wr": 62.3
+    },
+    {
+     "card": "Skeleton King",
+     "games": 248,
+     "wr": 60.9
+    }
+   ]
+  },
+  "Wizard": {
+   "evo_games": 11145,
+   "evo_wr": 59.1,
+   "solo_wr": 59.4,
+   "best_partners": [
+    {
+     "card": "Goblin Giant",
+     "games": 43,
+     "wr": 74.4
+    },
+    {
+     "card": "Prince",
+     "games": 43,
+     "wr": 72.1
+    },
+    {
+     "card": "Minion Giant",
+     "games": 76,
+     "wr": 69.7
+    },
+    {
+     "card": "Phoenix",
+     "games": 42,
+     "wr": 69.0
+    },
+    {
+     "card": "Dark Prince",
+     "games": 158,
+     "wr": 65.2
+    },
+    {
+     "card": "Cannon",
+     "games": 178,
+     "wr": 64.0
+    }
+   ]
+  },
+  "Baby Dragon": {
+   "evo_games": 10900,
+   "evo_wr": 56.7,
+   "solo_wr": 57.6,
+   "best_partners": [
+    {
+     "card": "Mother Witch",
+     "games": 212,
+     "wr": 67.9
+    },
+    {
+     "card": "Bandit",
+     "games": 92,
+     "wr": 67.4
+    },
+    {
+     "card": "Royal Giant",
+     "games": 54,
+     "wr": 66.7
+    },
+    {
+     "card": "Fisherman",
+     "games": 45,
+     "wr": 66.7
+    },
+    {
+     "card": "Little Prince",
+     "games": 130,
+     "wr": 65.4
+    },
+    {
+     "card": "Cannon",
+     "games": 1643,
+     "wr": 64.1
+    }
+   ]
+  },
+  "Inferno Dragon": {
+   "evo_games": 10614,
+   "evo_wr": 58.3,
+   "solo_wr": 59.1,
+   "best_partners": [
+    {
+     "card": "Witch",
+     "games": 108,
+     "wr": 91.7
+    },
+    {
+     "card": "Elixir Collector",
+     "games": 100,
+     "wr": 91.0
+    },
+    {
+     "card": "Giant",
+     "games": 110,
+     "wr": 88.2
+    },
+    {
+     "card": "Heal Spirit",
+     "games": 228,
+     "wr": 75.9
+    },
+    {
+     "card": "Elixir Golem",
+     "games": 66,
+     "wr": 75.8
+    },
+    {
+     "card": "Battle Healer",
+     "games": 49,
+     "wr": 75.5
+    }
+   ]
+  },
+  "Barbarian Barrel": {
+   "evo_games": 9902,
+   "evo_wr": 57.3,
+   "solo_wr": 59.4,
+   "best_partners": [
+    {
+     "card": "Berserker",
+     "games": 217,
+     "wr": 65.9
+    },
+    {
+     "card": "Void",
+     "games": 83,
+     "wr": 65.1
+    },
+    {
+     "card": "Wizard",
+     "games": 43,
+     "wr": 65.1
+    },
+    {
+     "card": "Bats",
+     "games": 165,
+     "wr": 63.6
+    },
+    {
+     "card": "Tornado",
+     "games": 178,
+     "wr": 62.4
+    },
+    {
+     "card": "Bomb Tower",
+     "games": 109,
+     "wr": 62.4
+    }
+   ]
+  },
+  "Goblin Barrel": {
+   "evo_games": 9535,
+   "evo_wr": 56.7,
+   "solo_wr": 57.9,
+   "best_partners": [
+    {
+     "card": "Rascals",
+     "games": 131,
+     "wr": 62.6
+    },
+    {
+     "card": "Cannon Cart",
+     "games": 109,
+     "wr": 61.5
+    },
+    {
+     "card": "Giant Snowball",
+     "games": 221,
+     "wr": 61.1
+    },
+    {
+     "card": "Bats",
+     "games": 228,
+     "wr": 60.1
+    },
+    {
+     "card": "Rocket",
+     "games": 1061,
+     "wr": 59.6
+    },
+    {
+     "card": "Dark Prince",
+     "games": 237,
+     "wr": 59.5
+    }
+   ]
+  },
+  "Wall Breakers": {
+   "evo_games": 9333,
+   "evo_wr": 55.7,
+   "solo_wr": 56.2,
+   "best_partners": [
+    {
+     "card": "Rascals",
+     "games": 49,
+     "wr": 73.5
+    },
+    {
+     "card": "Rocket",
+     "games": 95,
+     "wr": 66.3
+    },
+    {
+     "card": "Goblin Gang",
+     "games": 44,
+     "wr": 63.6
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 158,
+     "wr": 62.0
+    },
+    {
+     "card": "Goblin Hut",
+     "games": 195,
+     "wr": 61.5
+    },
+    {
+     "card": "Dark Prince",
+     "games": 99,
+     "wr": 60.6
+    }
+   ]
+  },
+  "Magic Archer": {
+   "evo_games": 9277,
+   "evo_wr": 55.7,
+   "solo_wr": 56.4,
+   "best_partners": [
+    {
+     "card": "Goblin Cage",
+     "games": 51,
+     "wr": 72.5
+    },
+    {
+     "card": "Spear Goblins",
+     "games": 134,
+     "wr": 70.9
+    },
+    {
+     "card": "Knight",
+     "games": 343,
+     "wr": 66.8
+    },
+    {
+     "card": "Giant Skeleton",
+     "games": 56,
+     "wr": 64.3
+    },
+    {
+     "card": "Zap",
+     "games": 117,
+     "wr": 64.1
+    },
+    {
+     "card": "Goblin Demolisher",
+     "games": 361,
+     "wr": 62.6
+    }
+   ]
+  },
+  "Tombstone": {
+   "evo_games": 8326,
+   "evo_wr": 54.1,
+   "solo_wr": 55.4,
+   "best_partners": [
+    {
+     "card": "Giant Skeleton",
+     "games": 99,
+     "wr": 69.7
+    },
+    {
+     "card": "Minion Horde",
+     "games": 62,
+     "wr": 69.4
+    },
+    {
+     "card": "Royal Ghost",
+     "games": 128,
+     "wr": 68.8
+    },
+    {
+     "card": "Minion Giant",
+     "games": 60,
+     "wr": 68.3
+    },
+    {
+     "card": "Vines",
+     "games": 183,
+     "wr": 66.1
+    },
+    {
+     "card": "Bowler",
+     "games": 152,
+     "wr": 65.8
+    }
+   ]
+  },
+  "Knight": {
+   "evo_games": 8277,
+   "evo_wr": 59.2,
+   "solo_wr": 60.1,
+   "best_partners": [
+    {
+     "card": "Hunter",
+     "games": 358,
+     "wr": 74.9
+    },
+    {
+     "card": "Hog Rider",
+     "games": 45,
+     "wr": 68.9
+    },
+    {
+     "card": "Minion Giant",
+     "games": 874,
+     "wr": 68.6
+    },
+    {
+     "card": "Goblins",
+     "games": 190,
+     "wr": 67.9
+    },
+    {
+     "card": "Executioner",
+     "games": 174,
+     "wr": 66.7
+    },
+    {
+     "card": "Princess",
+     "games": 751,
+     "wr": 66.4
+    }
+   ]
+  },
+  "Minion Horde": {
+   "evo_games": 7939,
+   "evo_wr": 58.6,
+   "solo_wr": 58.7,
+   "best_partners": [
+    {
+     "card": "Archer Queen",
+     "games": 64,
+     "wr": 68.8
+    },
+    {
+     "card": "Skeleton Barrel",
+     "games": 165,
+     "wr": 67.3
+    },
+    {
+     "card": "Giant Snowball",
+     "games": 53,
+     "wr": 66.0
+    },
+    {
+     "card": "Tombstone",
+     "games": 70,
+     "wr": 65.7
+    },
+    {
+     "card": "Spear Goblins",
+     "games": 216,
+     "wr": 64.4
+    },
+    {
+     "card": "Furnace",
+     "games": 300,
+     "wr": 64.0
+    }
+   ]
+  },
+  "Skeleton Barrel": {
+   "evo_games": 7465,
+   "evo_wr": 59.3,
+   "solo_wr": 61.1,
+   "best_partners": [
+    {
+     "card": "Giant Snowball",
+     "games": 87,
+     "wr": 69.0
+    },
+    {
+     "card": "Minion Horde",
+     "games": 159,
+     "wr": 67.9
+    },
+    {
+     "card": "Guards",
+     "games": 85,
+     "wr": 65.9
+    },
+    {
+     "card": "Skeletons",
+     "games": 621,
+     "wr": 64.1
+    },
+    {
+     "card": "Knight",
+     "games": 105,
+     "wr": 63.8
+    },
+    {
+     "card": "Rocket",
+     "games": 49,
+     "wr": 63.3
+    }
+   ]
+  },
+  "Ice Wizard": {
+   "evo_games": 6808,
+   "evo_wr": 61.5,
+   "solo_wr": 60.4,
+   "best_partners": [
+    {
+     "card": "Bomb Tower",
+     "games": 104,
+     "wr": 76.9
+    },
+    {
+     "card": "Zappies",
+     "games": 72,
+     "wr": 75.0
+    },
+    {
+     "card": "P.E.K.K.A",
+     "games": 154,
+     "wr": 74.0
+    },
+    {
+     "card": "Hog Rider",
+     "games": 83,
+     "wr": 71.1
+    },
+    {
+     "card": "Goblins",
+     "games": 60,
+     "wr": 70.0
+    },
+    {
+     "card": "Giant Skeleton",
+     "games": 188,
+     "wr": 69.7
+    }
+   ]
+  },
+  "Goblin Drill": {
+   "evo_games": 6450,
+   "evo_wr": 56.5,
+   "solo_wr": 56.6,
+   "best_partners": [
+    {
+     "card": "Royal Ghost",
+     "games": 54,
+     "wr": 77.8
+    },
+    {
+     "card": "Zappies",
+     "games": 58,
+     "wr": 75.9
+    },
+    {
+     "card": "Wall Breakers",
+     "games": 45,
+     "wr": 73.3
+    },
+    {
+     "card": "Giant Skeleton",
+     "games": 76,
+     "wr": 72.4
+    },
+    {
+     "card": "Tornado",
+     "games": 994,
+     "wr": 61.5
+    },
+    {
+     "card": "Goblin Demolisher",
+     "games": 1764,
+     "wr": 60.5
+    }
+   ]
+  },
+  "Firecracker": {
+   "evo_games": 6272,
+   "evo_wr": 58.3,
+   "solo_wr": 59.0,
+   "best_partners": [
+    {
+     "card": "Minion Giant",
+     "games": 102,
+     "wr": 91.2
+    },
+    {
+     "card": "Lightning",
+     "games": 217,
+     "wr": 61.8
+    },
+    {
+     "card": "Cannon",
+     "games": 2466,
+     "wr": 60.7
+    },
+    {
+     "card": "Valkyrie",
+     "games": 81,
+     "wr": 60.5
+    },
+    {
+     "card": "Goblins",
+     "games": 159,
+     "wr": 60.4
+    },
+    {
+     "card": "Monk",
+     "games": 80,
+     "wr": 60.0
+    }
+   ]
+  },
+  "Musketeer": {
+   "evo_games": 5800,
+   "evo_wr": 59.9,
+   "solo_wr": 59.3,
+   "best_partners": [
+    {
+     "card": "Goblin Curse",
+     "games": 63,
+     "wr": 66.7
+    },
+    {
+     "card": "Heal Spirit",
+     "games": 108,
+     "wr": 65.7
+    },
+    {
+     "card": "Minion Giant",
+     "games": 2412,
+     "wr": 64.6
+    },
+    {
+     "card": "Knight",
+     "games": 612,
+     "wr": 63.1
+    },
+    {
+     "card": "Golden Knight",
+     "games": 477,
+     "wr": 62.9
+    },
+    {
+     "card": "Fire Spirit",
+     "games": 69,
+     "wr": 62.3
+    }
+   ]
+  },
+  "Mega Minion": {
+   "evo_games": 5524,
+   "evo_wr": 55.9,
+   "solo_wr": 56.1,
+   "best_partners": [
+    {
+     "card": "Minion Giant",
+     "games": 288,
+     "wr": 62.5
+    },
+    {
+     "card": "Minions",
+     "games": 45,
+     "wr": 62.2
+    },
+    {
+     "card": "Royal Ghost",
+     "games": 121,
+     "wr": 62.0
+    },
+    {
+     "card": "Executioner",
+     "games": 112,
+     "wr": 61.6
+    },
+    {
+     "card": "Inferno Dragon",
+     "games": 113,
+     "wr": 61.1
+    },
+    {
+     "card": "Fisherman",
+     "games": 41,
+     "wr": 61.0
+    }
+   ]
+  },
+  "Giant": {
+   "evo_games": 5371,
+   "evo_wr": 57.8,
+   "solo_wr": 57.8,
+   "best_partners": [
+    {
+     "card": "Mother Witch",
+     "games": 42,
+     "wr": 83.3
+    },
+    {
+     "card": "Electro Wizard",
+     "games": 67,
+     "wr": 76.1
+    },
+    {
+     "card": "Witch",
+     "games": 521,
+     "wr": 65.8
+    },
+    {
+     "card": "Bowler",
+     "games": 574,
+     "wr": 65.5
+    },
+    {
+     "card": "Minions",
+     "games": 356,
+     "wr": 65.2
+    },
+    {
+     "card": "Graveyard",
+     "games": 592,
+     "wr": 65.0
+    }
+   ]
+  },
+  "Skeleton Army": {
+   "evo_games": 5107,
+   "evo_wr": 57.5,
+   "solo_wr": 59.6,
+   "best_partners": [
+    {
+     "card": "Executioner",
+     "games": 86,
+     "wr": 84.9
+    },
+    {
+     "card": "Rage",
+     "games": 193,
+     "wr": 79.3
+    },
+    {
+     "card": "Elixir Golem",
+     "games": 214,
+     "wr": 76.2
+    },
+    {
+     "card": "Night Witch",
+     "games": 222,
+     "wr": 75.7
+    },
+    {
+     "card": "Miner",
+     "games": 135,
+     "wr": 71.9
+    },
+    {
+     "card": "Goblin Curse",
+     "games": 110,
+     "wr": 71.8
+    }
+   ]
+  },
+  "Bowler": {
+   "evo_games": 5080,
+   "evo_wr": 58.6,
+   "solo_wr": 60.5,
+   "best_partners": [
+    {
+     "card": "Executioner",
+     "games": 49,
+     "wr": 75.5
+    },
+    {
+     "card": "Furnace",
+     "games": 63,
+     "wr": 71.4
+    },
+    {
+     "card": "Tombstone",
+     "games": 89,
+     "wr": 67.4
+    },
+    {
+     "card": "Freeze",
+     "games": 82,
+     "wr": 65.9
+    },
+    {
+     "card": "Zap",
+     "games": 201,
+     "wr": 65.7
+    },
+    {
+     "card": "Battle Ram",
+     "games": 110,
+     "wr": 63.6
+    }
+   ]
+  },
+  "Executioner": {
+   "evo_games": 4834,
+   "evo_wr": 59.6,
+   "solo_wr": 59.5,
+   "best_partners": [
+    {
+     "card": "Skeleton King",
+     "games": 66,
+     "wr": 90.9
+    },
+    {
+     "card": "Goblin Curse",
+     "games": 67,
+     "wr": 89.6
+    },
+    {
+     "card": "Rage",
+     "games": 77,
+     "wr": 85.7
+    },
+    {
+     "card": "Skeleton Army",
+     "games": 86,
+     "wr": 84.9
+    },
+    {
+     "card": "Night Witch",
+     "games": 88,
+     "wr": 84.1
+    },
+    {
+     "card": "Elixir Golem",
+     "games": 93,
+     "wr": 82.8
+    }
+   ]
+  },
+  "Furnace": {
+   "evo_games": 4678,
+   "evo_wr": 58.2,
+   "solo_wr": 59.2,
+   "best_partners": [
+    {
+     "card": "Battle Ram",
+     "games": 93,
+     "wr": 74.2
+    },
+    {
+     "card": "Bandit",
+     "games": 97,
+     "wr": 72.2
+    },
+    {
+     "card": "Electro Wizard",
+     "games": 115,
+     "wr": 68.7
+    },
+    {
+     "card": "Bowler",
+     "games": 47,
+     "wr": 68.1
+    },
+    {
+     "card": "Heal Spirit",
+     "games": 109,
+     "wr": 67.0
+    },
+    {
+     "card": "Rune Giant",
+     "games": 154,
+     "wr": 66.2
+    }
+   ]
+  },
+  "Goblins": {
+   "evo_games": 4551,
+   "evo_wr": 59.6,
+   "solo_wr": 58.5,
+   "best_partners": [
+    {
+     "card": "Suspicious Bush",
+     "games": 411,
+     "wr": 65.5
+    },
+    {
+     "card": "Berserker",
+     "games": 92,
+     "wr": 65.2
+    },
+    {
+     "card": "Tornado",
+     "games": 502,
+     "wr": 64.7
+    },
+    {
+     "card": "Minion Giant",
+     "games": 82,
+     "wr": 64.6
+    },
+    {
+     "card": "Lightning",
+     "games": 146,
+     "wr": 64.4
+    },
+    {
+     "card": "Knight",
+     "games": 84,
+     "wr": 64.3
+    }
+   ]
+  },
+  "Goblin Cage": {
+   "evo_games": 4501,
+   "evo_wr": 57.3,
+   "solo_wr": 57.5,
+   "best_partners": [
+    {
+     "card": "Giant Snowball",
+     "games": 45,
+     "wr": 88.9
+    },
+    {
+     "card": "Magic Archer",
+     "games": 44,
+     "wr": 77.3
+    },
+    {
+     "card": "Goblinstein",
+     "games": 73,
+     "wr": 76.7
+    },
+    {
+     "card": "Graveyard",
+     "games": 115,
+     "wr": 74.8
+    },
+    {
+     "card": "Poison",
+     "games": 87,
+     "wr": 74.7
+    },
+    {
+     "card": "Guards",
+     "games": 93,
+     "wr": 72.0
+    }
+   ]
+  },
+  "Balloon": {
+   "evo_games": 4416,
+   "evo_wr": 55.7,
+   "solo_wr": 56.6,
+   "best_partners": [
+    {
+     "card": "Goblins",
+     "games": 90,
+     "wr": 72.2
+    },
+    {
+     "card": "Bats",
+     "games": 120,
+     "wr": 65.0
+    },
+    {
+     "card": "Royal Ghost",
+     "games": 41,
+     "wr": 63.4
+    },
+    {
+     "card": "Mother Witch",
+     "games": 41,
+     "wr": 63.4
+    },
+    {
+     "card": "Giant",
+     "games": 97,
+     "wr": 61.9
+    },
+    {
+     "card": "Knight",
+     "games": 248,
+     "wr": 61.7
+    }
+   ]
+  },
+  "Lumberjack": {
+   "evo_games": 4307,
+   "evo_wr": 57.0,
+   "solo_wr": 57.2,
+   "best_partners": [
+    {
+     "card": "Bats",
+     "games": 97,
+     "wr": 81.4
+    },
+    {
+     "card": "Skeleton Army",
+     "games": 94,
+     "wr": 74.5
+    },
+    {
+     "card": "Electro Dragon",
+     "games": 45,
+     "wr": 71.1
+    },
+    {
+     "card": "Mini P.E.K.K.A",
+     "games": 187,
+     "wr": 67.4
+    },
+    {
+     "card": "Night Witch",
+     "games": 284,
+     "wr": 65.8
+    },
+    {
+     "card": "Tornado",
+     "games": 115,
+     "wr": 65.2
+    }
+   ]
+  },
+  "Mega Knight": {
+   "evo_games": 3538,
+   "evo_wr": 56.3,
+   "solo_wr": 58.3,
+   "best_partners": [
+    {
+     "card": "Fisherman",
+     "games": 42,
+     "wr": 69.0
+    },
+    {
+     "card": "Bomb Tower",
+     "games": 54,
+     "wr": 66.7
+    },
+    {
+     "card": "Goblin Demolisher",
+     "games": 44,
+     "wr": 65.9
+    },
+    {
+     "card": "Ronin",
+     "games": 425,
+     "wr": 64.2
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 285,
+     "wr": 60.0
+    },
+    {
+     "card": "Wizard",
+     "games": 77,
+     "wr": 59.7
+    }
+   ]
+  },
+  "Dark Prince": {
+   "evo_games": 3195,
+   "evo_wr": 55.5,
+   "solo_wr": 57.4,
+   "best_partners": [
+    {
+     "card": "Bats",
+     "games": 48,
+     "wr": 70.8
+    },
+    {
+     "card": "Royal Ghost",
+     "games": 80,
+     "wr": 66.2
+    },
+    {
+     "card": "Golden Knight",
+     "games": 50,
+     "wr": 66.0
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 81,
+     "wr": 65.4
+    },
+    {
+     "card": "Rascals",
+     "games": 102,
+     "wr": 64.7
+    },
+    {
+     "card": "Minion Giant",
+     "games": 55,
+     "wr": 63.6
+    }
+   ]
+  },
+  "Princess": {
+   "evo_games": 2813,
+   "evo_wr": 56.9,
+   "solo_wr": 57.8,
+   "best_partners": [
+    {
+     "card": "Hunter",
+     "games": 311,
+     "wr": 77.5
+    },
+    {
+     "card": "Minion Giant",
+     "games": 333,
+     "wr": 76.0
+    },
+    {
+     "card": "Knight",
+     "games": 492,
+     "wr": 71.3
+    },
+    {
+     "card": "Fireball",
+     "games": 524,
+     "wr": 68.5
+    },
+    {
+     "card": "Barbarian Barrel",
+     "games": 751,
+     "wr": 65.6
+    },
+    {
+     "card": "Fire Spirit",
+     "games": 153,
+     "wr": 62.7
+    }
+   ]
+  },
+  "Witch": {
+   "evo_games": 2423,
+   "evo_wr": 60.3,
+   "solo_wr": 61.6,
+   "best_partners": [
+    {
+     "card": "Inferno Dragon",
+     "games": 111,
+     "wr": 91.0
+    },
+    {
+     "card": "Mother Witch",
+     "games": 63,
+     "wr": 84.1
+    },
+    {
+     "card": "Spirit Empress",
+     "games": 93,
+     "wr": 81.7
+    },
+    {
+     "card": "Mirror",
+     "games": 87,
+     "wr": 80.5
+    },
+    {
+     "card": "Golden Knight",
+     "games": 97,
+     "wr": 79.4
+    },
+    {
+     "card": "Heal Spirit",
+     "games": 258,
+     "wr": 76.7
+    }
+   ]
+  },
+  "Ice Golem": {
+   "evo_games": 1831,
+   "evo_wr": 57.1,
+   "solo_wr": 60.1,
+   "best_partners": [
+    {
+     "card": "Minion Giant",
+     "games": 141,
+     "wr": 66.0
+    },
+    {
+     "card": "Freeze",
+     "games": 58,
+     "wr": 65.5
+    },
+    {
+     "card": "Spear Goblins",
+     "games": 40,
+     "wr": 65.0
+    },
+    {
+     "card": "Giant Snowball",
+     "games": 71,
+     "wr": 64.8
+    },
+    {
+     "card": "Ronin",
+     "games": 51,
+     "wr": 64.7
+    },
+    {
+     "card": "Fire Spirit",
+     "games": 44,
+     "wr": 63.6
+    }
+   ]
+  },
+  "Mini P.E.K.K.A": {
+   "evo_games": 1809,
+   "evo_wr": 60.7,
+   "solo_wr": 60.8,
+   "best_partners": [
+    {
+     "card": "Witch",
+     "games": 189,
+     "wr": 76.7
+    },
+    {
+     "card": "Rage",
+     "games": 165,
+     "wr": 76.4
+    },
+    {
+     "card": "Executioner",
+     "games": 45,
+     "wr": 75.6
+    },
+    {
+     "card": "Inferno Dragon",
+     "games": 221,
+     "wr": 75.1
+    },
+    {
+     "card": "Elixir Collector",
+     "games": 286,
+     "wr": 70.6
+    },
+    {
+     "card": "Lumberjack",
+     "games": 181,
+     "wr": 66.3
+    }
+   ]
+  },
+  "Hunter": {
+   "evo_games": 1663,
+   "evo_wr": 57.1,
+   "solo_wr": 57.3,
+   "best_partners": [
+    {
+     "card": "Princess",
+     "games": 299,
+     "wr": 77.9
+    },
+    {
+     "card": "Knight",
+     "games": 344,
+     "wr": 75.3
+    },
+    {
+     "card": "Minion Giant",
+     "games": 357,
+     "wr": 74.5
+    },
+    {
+     "card": "Ice Spirit",
+     "games": 450,
+     "wr": 71.6
+    },
+    {
+     "card": "Barbarian Barrel",
+     "games": 1165,
+     "wr": 59.2
+    },
+    {
+     "card": "Fire Spirit",
+     "games": 96,
+     "wr": 58.3
+    }
+   ]
+  },
+  "Dart Goblin": {
+   "evo_games": 1522,
+   "evo_wr": 57.7,
+   "solo_wr": 58.5,
+   "best_partners": [
+    {
+     "card": "Golden Knight",
+     "games": 52,
+     "wr": 69.2
+    },
+    {
+     "card": "Royal Ghost",
+     "games": 381,
+     "wr": 67.7
+    },
+    {
+     "card": "Bomb Tower",
+     "games": 201,
+     "wr": 65.7
+    },
+    {
+     "card": "Goblins",
+     "games": 439,
+     "wr": 65.1
+    },
+    {
+     "card": "Rascals",
+     "games": 572,
+     "wr": 64.0
+    },
+    {
+     "card": "Skeleton Barrel",
+     "games": 559,
+     "wr": 63.7
+    }
+   ]
+  },
+  "P.E.K.K.A": {
+   "evo_games": 1413,
+   "evo_wr": 59.0,
+   "solo_wr": 61.4,
+   "best_partners": [
+    {
+     "card": "Minion Giant",
+     "games": 62,
+     "wr": 74.2
+    },
+    {
+     "card": "Zappies",
+     "games": 49,
+     "wr": 69.4
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 111,
+     "wr": 69.4
+    },
+    {
+     "card": "Bandit",
+     "games": 205,
+     "wr": 65.9
+    },
+    {
+     "card": "Fireball",
+     "games": 84,
+     "wr": 64.3
+    },
+    {
+     "card": "Zap",
+     "games": 424,
+     "wr": 63.7
+    }
+   ]
+  },
+  "Ice Spirit": {
+   "evo_games": 1130,
+   "evo_wr": 62.7,
+   "solo_wr": 57.6,
+   "best_partners": [
+    {
+     "card": "Tornado",
+     "games": 380,
+     "wr": 73.9
+    },
+    {
+     "card": "Executioner",
+     "games": 370,
+     "wr": 73.8
+    },
+    {
+     "card": "Valkyrie",
+     "games": 393,
+     "wr": 72.8
+    },
+    {
+     "card": "Guards",
+     "games": 330,
+     "wr": 72.4
+    },
+    {
+     "card": "Rocket",
+     "games": 343,
+     "wr": 71.4
+    },
+    {
+     "card": "Graveyard",
+     "games": 41,
+     "wr": 70.7
+    }
+   ]
+  },
+  "Royal Recruits": {
+   "evo_games": 1026,
+   "evo_wr": 58.3,
+   "solo_wr": 59.4,
+   "best_partners": [
+    {
+     "card": "Barbarian Barrel",
+     "games": 879,
+     "wr": 59.3
+    },
+    {
+     "card": "Zappies",
+     "games": 891,
+     "wr": 59.3
+    },
+    {
+     "card": "Royal Hogs",
+     "games": 868,
+     "wr": 59.3
+    },
+    {
+     "card": "Goblin Cage",
+     "games": 890,
+     "wr": 59.2
+    },
+    {
+     "card": "Electro Spirit",
+     "games": 115,
+     "wr": 59.1
+    },
+    {
+     "card": "Golden Knight",
+     "games": 745,
+     "wr": 59.1
+    }
+   ]
+  },
+  "Bomber": {
+   "evo_games": 657,
+   "evo_wr": 56.2,
+   "solo_wr": 56.5,
+   "best_partners": [
+    {
+     "card": "Goblin Drill",
+     "games": 40,
+     "wr": 67.5
+    },
+    {
+     "card": "Freeze",
+     "games": 40,
+     "wr": 65.0
+    },
+    {
+     "card": "Knight",
+     "games": 59,
+     "wr": 62.7
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 68,
+     "wr": 61.8
+    },
+    {
+     "card": "The Log",
+     "games": 68,
+     "wr": 60.3
+    },
+    {
+     "card": "Tornado",
+     "games": 218,
+     "wr": 57.8
+    }
+   ]
+  },
+  "Goblin Giant": {
+   "evo_games": 575,
+   "evo_wr": 52.7,
+   "solo_wr": 59.2,
+   "best_partners": [
+    {
+     "card": "Skeletons",
+     "games": 44,
+     "wr": 61.4
+    },
+    {
+     "card": "Elite Barbarians",
+     "games": 41,
+     "wr": 61.0
+    },
+    {
+     "card": "Heal Spirit",
+     "games": 100,
+     "wr": 61.0
+    },
+    {
+     "card": "Electro Wizard",
+     "games": 60,
+     "wr": 58.3
+    },
+    {
+     "card": "Mega Minion",
+     "games": 74,
+     "wr": 58.1
+    },
+    {
+     "card": "Dark Prince",
+     "games": 81,
+     "wr": 56.8
+    }
+   ]
+  },
+  "Barbarians": {
+   "evo_games": 554,
+   "evo_wr": 52.3,
+   "solo_wr": 55.5,
+   "best_partners": [
+    {
+     "card": "Ice Golem",
+     "games": 42,
+     "wr": 64.3
+    },
+    {
+     "card": "Freeze",
+     "games": 44,
+     "wr": 63.6
+    },
+    {
+     "card": "Bomber",
+     "games": 52,
+     "wr": 59.6
+    },
+    {
+     "card": "Fireball",
+     "games": 145,
+     "wr": 58.6
+    },
+    {
+     "card": "Bats",
+     "games": 43,
+     "wr": 58.1
+    },
+    {
+     "card": "Balloon",
+     "games": 152,
+     "wr": 57.2
+    }
+   ]
+  },
+  "Electro Dragon": {
+   "evo_games": 388,
+   "evo_wr": 60.3,
+   "solo_wr": 62.6,
+   "best_partners": [
+    {
+     "card": "Elixir Golem",
+     "games": 91,
+     "wr": 71.4
+    },
+    {
+     "card": "Lumberjack",
+     "games": 54,
+     "wr": 68.5
+    },
+    {
+     "card": "Battle Healer",
+     "games": 119,
+     "wr": 68.1
+    },
+    {
+     "card": "Golden Knight",
+     "games": 66,
+     "wr": 65.2
+    },
+    {
+     "card": "Bomber",
+     "games": 45,
+     "wr": 64.4
+    },
+    {
+     "card": "Skeletons",
+     "games": 54,
+     "wr": 63.0
+    }
+   ]
+  },
+  "Electro Wizard": {
+   "evo_games": 335,
+   "evo_wr": 78.8,
+   "solo_wr": 61.1,
+   "best_partners": [
+    {
+     "card": "Hunter",
+     "games": 40,
+     "wr": 87.5
+    },
+    {
+     "card": "Zap",
+     "games": 75,
+     "wr": 85.3
+    },
+    {
+     "card": "Ronin",
+     "games": 93,
+     "wr": 84.9
+    },
+    {
+     "card": "Mother Witch",
+     "games": 71,
+     "wr": 83.1
+    },
+    {
+     "card": "Bandit",
+     "games": 121,
+     "wr": 82.6
+    },
+    {
+     "card": "Royal Ghost",
+     "games": 174,
+     "wr": 81.6
+    }
+   ]
+  }
+ },
+ "champions": {
+  "Golden Knight": {
+   "games": 18443,
+   "wr": 59.5,
+   "best_partners": [
+    {
+     "card": "Prince",
+     "games": 42,
+     "wr": 83.3
+    },
+    {
+     "card": "Witch",
+     "games": 101,
+     "wr": 79.2
+    },
+    {
+     "card": "Mirror",
+     "games": 141,
+     "wr": 72.3
+    },
+    {
+     "card": "Archers",
+     "games": 127,
+     "wr": 68.5
+    },
+    {
+     "card": "Phoenix",
+     "games": 175,
+     "wr": 67.4
+    },
+    {
+     "card": "Rascals",
+     "games": 121,
+     "wr": 66.9
+    }
+   ]
+  },
+  "Boss Bandit": {
+   "games": 4827,
+   "wr": 54.9,
+   "best_partners": [
+    {
+     "card": "Royal Delivery",
+     "games": 66,
+     "wr": 62.1
+    },
+    {
+     "card": "Minion Giant",
+     "games": 186,
+     "wr": 61.8
+    },
+    {
+     "card": "Mega Minion",
+     "games": 123,
+     "wr": 61.0
+    },
+    {
+     "card": "Cannon",
+     "games": 70,
+     "wr": 60.0
+    },
+    {
+     "card": "Bomb Tower",
+     "games": 40,
+     "wr": 60.0
+    },
+    {
+     "card": "Fireball",
+     "games": 392,
+     "wr": 59.9
+    }
+   ]
+  },
+  "Mighty Miner": {
+   "games": 9847,
+   "wr": 57.8,
+   "best_partners": [
+    {
+     "card": "Ice Wizard",
+     "games": 160,
+     "wr": 68.1
+    },
+    {
+     "card": "Royal Ghost",
+     "games": 48,
+     "wr": 64.6
+    },
+    {
+     "card": "Goblin Demolisher",
+     "games": 72,
+     "wr": 62.5
+    },
+    {
+     "card": "Rascals",
+     "games": 45,
+     "wr": 62.2
+    },
+    {
+     "card": "Spear Goblins",
+     "games": 112,
+     "wr": 60.7
+    },
+    {
+     "card": "Berserker",
+     "games": 162,
+     "wr": 60.5
+    }
+   ]
+  },
+  "Monk": {
+   "games": 4169,
+   "wr": 52.7,
+   "best_partners": [
+    {
+     "card": "Baby Dragon",
+     "games": 73,
+     "wr": 63.0
+    },
+    {
+     "card": "Cannon",
+     "games": 251,
+     "wr": 62.2
+    },
+    {
+     "card": "Royal Delivery",
+     "games": 57,
+     "wr": 61.4
+    },
+    {
+     "card": "Minions",
+     "games": 75,
+     "wr": 61.3
+    },
+    {
+     "card": "Firecracker",
+     "games": 85,
+     "wr": 60.0
+    },
+    {
+     "card": "Royal Ghost",
+     "games": 181,
+     "wr": 59.1
+    }
+   ]
+  },
+  "Goblinstein": {
+   "games": 23753,
+   "wr": 60.1,
+   "best_partners": [
+    {
+     "card": "Goblin Cage",
+     "games": 84,
+     "wr": 75.0
+    },
+    {
+     "card": "Ice Wizard",
+     "games": 1669,
+     "wr": 68.2
+    },
+    {
+     "card": "Minion Giant",
+     "games": 3935,
+     "wr": 67.7
+    },
+    {
+     "card": "Tesla",
+     "games": 847,
+     "wr": 66.4
+    },
+    {
+     "card": "Valkyrie",
+     "games": 171,
+     "wr": 66.1
+    },
+    {
+     "card": "Goblin Hut",
+     "games": 2878,
+     "wr": 64.5
+    }
+   ]
+  },
+  "Archer Queen": {
+   "games": 4856,
+   "wr": 56.0,
+   "best_partners": [
+    {
+     "card": "Magic Archer",
+     "games": 42,
+     "wr": 73.8
+    },
+    {
+     "card": "Minion Horde",
+     "games": 64,
+     "wr": 68.8
+    },
+    {
+     "card": "Goblin Gang",
+     "games": 84,
+     "wr": 66.7
+    },
+    {
+     "card": "Spear Goblins",
+     "games": 66,
+     "wr": 66.7
+    },
+    {
+     "card": "Golden Knight",
+     "games": 43,
+     "wr": 65.1
+    },
+    {
+     "card": "Goblin Barrel",
+     "games": 48,
+     "wr": 64.6
+    }
+   ]
+  },
+  "Little Prince": {
+   "games": 9311,
+   "wr": 60.3,
+   "best_partners": [
+    {
+     "card": "Bowler",
+     "games": 115,
+     "wr": 67.8
+    },
+    {
+     "card": "Goblins",
+     "games": 79,
+     "wr": 67.1
+    },
+    {
+     "card": "Electro Giant",
+     "games": 115,
+     "wr": 67.0
+    },
+    {
+     "card": "Tornado",
+     "games": 122,
+     "wr": 65.6
+    },
+    {
+     "card": "Baby Dragon",
+     "games": 132,
+     "wr": 65.2
+    },
+    {
+     "card": "Goblin Demolisher",
+     "games": 901,
+     "wr": 64.9
+    }
+   ]
+  },
+  "Skeleton King": {
+   "games": 1401,
+   "wr": 59.2,
+   "best_partners": [
+    {
+     "card": "Executioner",
+     "games": 66,
+     "wr": 90.9
+    },
+    {
+     "card": "Miner",
+     "games": 101,
+     "wr": 77.2
+    },
+    {
+     "card": "Elixir Golem",
+     "games": 226,
+     "wr": 76.1
+    },
+    {
+     "card": "Night Witch",
+     "games": 237,
+     "wr": 75.9
+    },
+    {
+     "card": "Goblin Curse",
+     "games": 104,
+     "wr": 75.0
+    },
+    {
+     "card": "Rage",
+     "games": 224,
+     "wr": 73.7
+    }
+   ]
+  }
+ }
+}
