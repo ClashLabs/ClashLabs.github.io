@@ -1,4 +1,4 @@
 {
-  "apiBase": "",
+  "apiBase": "apiBase": "https://clashlabs-api.foxchess.workers.dev",
   "_comment": "After you deploy the Cloudflare Worker, paste its URL here (no trailing slash), e.g. https://clashlabs-api.YOURNAME.workers.dev — the Deck Lab page reads it. Leave empty to hide Deck Lab until the Worker is live."
 }
