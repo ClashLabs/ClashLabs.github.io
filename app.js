@@ -71,7 +71,7 @@ function treeState() { if (!window._line) window._line = []; return window._line
 function cardImg(n, w) { const i = synIcon(n); return i ? `<img src="${esc(i)}" alt="" style="width:${w}px">` : ''; }
 
 function renderTree() {
-  if (!SYN) { app().innerHTML = `<h1 class="page">Synergy Tree</h1><div class="card"><div class="note">Synergy data isn't loaded.</div></div>`; return; }
+  if (!SYN || !SYN.partners) { app().innerHTML = `<h1 class="page">Synergy Tree</h1><div class="card"><div class="note">Synergy data is still loading or out of date — try a full refresh (hold Shift and click reload).</div></div>`; return; }
   const line = treeState();
   const seeds = SEED_WINCONS.filter(c => SYN.partners[c]).slice(0, 14);
   let html = `<h1 class="page">Synergy Tree</h1>
@@ -326,7 +326,8 @@ async function boot() {
   initTheme();
   try {
     const loadJSON = async (name, optional) => {
-      for (const p of ['data/'+name, name]) { try { const r=await fetch(p); if (r.ok) return await r.json(); } catch(e){} }
+      // root first (our deploy is flat), then data/; always revalidate so a stale cache can't bite
+      for (const p of [name, 'data/'+name]) { try { const r=await fetch(p,{cache:'no-cache'}); if (r.ok) return await r.json(); } catch(e){} }
       if (optional) return null; throw new Error('missing '+name);
     };
     const files = ['players','partners','h2h','facts','meta'];
