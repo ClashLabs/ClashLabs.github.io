@@ -360,14 +360,22 @@ function initTheme() {
 async function boot() {
   initTheme();
   try {
+    // Resilient loader: find each JSON whether it sits in data/ OR at the repo root.
+    const loadJSON = async (name, optional) => {
+      for (const p of ['data/' + name, name]) {
+        try { const r = await fetch(p); if (r.ok) return await r.json(); } catch (e) {}
+      }
+      if (optional) return null;
+      throw new Error('missing ' + name);
+    };
     const files = ['players', 'partners', 'h2h', 'facts', 'meta'];
-    const got = await Promise.all(files.map(f => fetch('data/' + f + '.json').then(r => r.json())));
+    const got = await Promise.all(files.map(f => loadJSON(f + '.json')));
     files.forEach((f, i) => DATA[f] = got[i]);
     document.getElementById('footgen').textContent = ' · Updated ' + DATA.meta.generated;
     // optional: Deck Lab config + synergy dataset (both may be absent)
-    try { CONFIG = await fetch('data/config.json').then(r => r.ok ? r.json() : CONFIG); } catch (e) {}
+    const cfg = await loadJSON('config.json', true); if (cfg) CONFIG = cfg;
     if (CONFIG.apiBase) { const n = document.getElementById('navLab'); if (n) n.hidden = false; }
-    try { SYN = await fetch('data/synergy.json').then(r => r.ok ? r.json() : null); } catch (e) { SYN = null; }
+    SYN = await loadJSON('synergy.json', true);
     addEventListener('hashchange', render); render();
   } catch (e) { app().innerHTML = '<p class="note">Could not load data.</p>'; console.error(e); }
 }
