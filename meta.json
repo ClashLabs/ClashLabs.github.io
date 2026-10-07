@@ -1,0 +1,103 @@
+{
+  "generated": "2026-10-06",
+  "months_covered": [
+    "2026-10",
+    "2026-09",
+    "2026-08",
+    "2026-07"
+  ],
+  "latest_month": "2026-10",
+  "finalist_count": 16,
+  "roster": [
+    {
+      "handle": "Mohamed Light",
+      "country": "Egypt",
+      "qual": "Season Golden Ticket (S1, S2, S4)"
+    },
+    {
+      "handle": "Pedro",
+      "country": "Brazil",
+      "qual": "Season Golden Ticket"
+    },
+    {
+      "handle": "SandBox",
+      "country": "South Korea",
+      "qual": "Season Golden Ticket"
+    },
+    {
+      "handle": "Clown",
+      "country": "South Korea",
+      "qual": "Season Golden Ticket (S2, S4)"
+    },
+    {
+      "handle": "Mugi",
+      "country": "Japan",
+      "qual": "Season Golden Ticket (S5)"
+    },
+    {
+      "handle": "Sub",
+      "country": "Brazil",
+      "qual": "Leaderboard"
+    },
+    {
+      "handle": "adriel",
+      "country": "Dominican Republic",
+      "qual": "Leaderboard"
+    },
+    {
+      "handle": "JorZ",
+      "country": "Spain",
+      "qual": "Leaderboard"
+    },
+    {
+      "handle": "Ryley",
+      "country": "Canada",
+      "qual": "Leaderboard"
+    },
+    {
+      "handle": "Vitor75",
+      "country": "Portugal",
+      "qual": "Leaderboard"
+    },
+    {
+      "handle": "Guriko",
+      "country": "Japan",
+      "qual": "Leaderboard"
+    },
+    {
+      "handle": "Morten",
+      "country": "Germany",
+      "qual": "Leaderboard"
+    },
+    {
+      "handle": "Viiper",
+      "country": "France",
+      "qual": "Leaderboard"
+    },
+    {
+      "handle": "Woo",
+      "country": "South Korea",
+      "qual": "Last Chance Qualifier (winner)"
+    },
+    {
+      "handle": "Hermit",
+      "country": "China",
+      "qual": "Clash Royale Champions Cup"
+    },
+    {
+      "handle": "Midnight",
+      "country": "China",
+      "qual": "Clash Royale Champions Cup"
+    }
+  ],
+  "min_games_for_game_wr": 20,
+  "min_duels_for_duel_wr": 5,
+  "methodology": [
+    "Data comes from the public Clash Royale API, which only returns each player's ~25 most recent battles. We archive them several times a day, so games played between fetches can be missed. Numbers are a sample, not a complete record.",
+    "Practice and Official CRL games look identical in the data. Official matches are labeled by hand from the published bracket, so labels can lag behind live events.",
+    "A \"duel\" is a set of games against the same opponent. A duel win means winning the majority of its games.",
+    "Players with multiple accounts are combined into one profile.",
+    "Win rates are shown with their sample size. Small samples are faded.",
+    "No deck or card data is published."
+  ]
+}

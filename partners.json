@@ -1,0 +1,787 @@
+{
+  "generated": "2026-10-06",
+  "partners": {
+    "Mohamed Light": [
+      {
+        "name": "SandBox",
+        "is_finalist": true,
+        "games": 58,
+        "game_wins": 34,
+        "game_wr": 58.6,
+        "duels": 18,
+        "duel_wins": 13,
+        "duel_wr": 72.2
+      },
+      {
+        "name": "Mugi",
+        "is_finalist": true,
+        "games": 54,
+        "game_wins": 28,
+        "game_wr": 51.9,
+        "duels": 17,
+        "duel_wins": 8,
+        "duel_wr": 47.1
+      },
+      {
+        "name": "Vitor75",
+        "is_finalist": true,
+        "games": 43,
+        "game_wins": 32,
+        "game_wr": 74.4,
+        "duels": 14,
+        "duel_wins": 12,
+        "duel_wr": 85.7
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 39,
+        "game_wins": 22,
+        "game_wr": 56.4,
+        "duels": 13,
+        "duel_wins": 9,
+        "duel_wr": 69.2
+      },
+      {
+        "name": "Ryley",
+        "is_finalist": true,
+        "games": 34,
+        "game_wins": 27,
+        "game_wr": 79.4,
+        "duels": 11,
+        "duel_wins": 9,
+        "duel_wr": 81.8
+      }
+    ],
+    "Pedro": [
+      {
+        "name": "SandBox",
+        "is_finalist": true,
+        "games": 81,
+        "game_wins": 43,
+        "game_wr": 53.1,
+        "duels": 27,
+        "duel_wins": 14,
+        "duel_wr": 51.9
+      },
+      {
+        "name": "Ian77",
+        "is_finalist": false,
+        "games": 45,
+        "game_wins": 17,
+        "game_wr": 37.8,
+        "duels": 15,
+        "duel_wins": 6,
+        "duel_wr": 40.0
+      },
+      {
+        "name": "EGW",
+        "is_finalist": false,
+        "games": 37,
+        "game_wins": 23,
+        "game_wr": 62.2,
+        "duels": 11,
+        "duel_wins": 9,
+        "duel_wr": 81.8
+      },
+      {
+        "name": "Steeef",
+        "is_finalist": false,
+        "games": 30,
+        "game_wins": 19,
+        "game_wr": 63.3,
+        "duels": 10,
+        "duel_wins": 7,
+        "duel_wr": 70.0
+      },
+      {
+        "name": "Vitor75",
+        "is_finalist": true,
+        "games": 27,
+        "game_wins": 17,
+        "game_wr": 63.0,
+        "duels": 9,
+        "duel_wins": 7,
+        "duel_wr": 77.8
+      }
+    ],
+    "SandBox": [
+      {
+        "name": "Sub",
+        "is_finalist": true,
+        "games": 156,
+        "game_wins": 74,
+        "game_wr": 47.4,
+        "duels": 52,
+        "duel_wins": 27,
+        "duel_wr": 51.9
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 110,
+        "game_wins": 46,
+        "game_wr": 41.8,
+        "duels": 37,
+        "duel_wins": 14,
+        "duel_wr": 37.8
+      },
+      {
+        "name": "Vitor75",
+        "is_finalist": true,
+        "games": 91,
+        "game_wins": 49,
+        "game_wr": 53.8,
+        "duels": 29,
+        "duel_wins": 14,
+        "duel_wr": 48.3
+      },
+      {
+        "name": "evolve✨律师",
+        "is_finalist": false,
+        "games": 79,
+        "game_wins": 53,
+        "game_wr": 67.1,
+        "duels": 24,
+        "duel_wins": 19,
+        "duel_wr": 79.2
+      },
+      {
+        "name": "adriel",
+        "is_finalist": true,
+        "games": 75,
+        "game_wins": 39,
+        "game_wr": 52.0,
+        "duels": 25,
+        "duel_wins": 15,
+        "duel_wr": 60.0
+      }
+    ],
+    "Clown": [
+      {
+        "name": "Coco",
+        "is_finalist": false,
+        "games": 126,
+        "game_wins": 82,
+        "game_wr": 65.1,
+        "duels": 42,
+        "duel_wins": 33,
+        "duel_wr": 78.6
+      },
+      {
+        "name": "SandBox",
+        "is_finalist": true,
+        "games": 123,
+        "game_wins": 67,
+        "game_wr": 54.5,
+        "duels": 41,
+        "duel_wins": 23,
+        "duel_wr": 56.1
+      },
+      {
+        "name": "Sub",
+        "is_finalist": true,
+        "games": 69,
+        "game_wins": 39,
+        "game_wr": 56.5,
+        "duels": 23,
+        "duel_wins": 14,
+        "duel_wr": 60.9
+      },
+      {
+        "name": "adriel",
+        "is_finalist": true,
+        "games": 63,
+        "game_wins": 32,
+        "game_wr": 50.8,
+        "duels": 21,
+        "duel_wins": 12,
+        "duel_wr": 57.1
+      },
+      {
+        "name": "Vitor75",
+        "is_finalist": true,
+        "games": 61,
+        "game_wins": 34,
+        "game_wr": 55.7,
+        "duels": 20,
+        "duel_wins": 12,
+        "duel_wr": 60.0
+      }
+    ],
+    "Mugi": [
+      {
+        "name": "Vitor75",
+        "is_finalist": true,
+        "games": 55,
+        "game_wins": 32,
+        "game_wr": 58.2,
+        "duels": 18,
+        "duel_wins": 12,
+        "duel_wr": 66.7
+      },
+      {
+        "name": "Mohamed Light",
+        "is_finalist": true,
+        "games": 55,
+        "game_wins": 26,
+        "game_wr": 47.3,
+        "duels": 17,
+        "duel_wins": 9,
+        "duel_wr": 52.9
+      },
+      {
+        "name": "Sub",
+        "is_finalist": true,
+        "games": 46,
+        "game_wins": 25,
+        "game_wr": 54.3,
+        "duels": 15,
+        "duel_wins": 7,
+        "duel_wr": 46.7
+      },
+      {
+        "name": "Guriko",
+        "is_finalist": true,
+        "games": 30,
+        "game_wins": 15,
+        "game_wr": 50.0,
+        "duels": 10,
+        "duel_wins": 6,
+        "duel_wr": 60.0
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 30,
+        "game_wins": 14,
+        "game_wr": 46.7,
+        "duels": 10,
+        "duel_wins": 4,
+        "duel_wr": 40.0
+      }
+    ],
+    "Sub": [
+      {
+        "name": "SandBox",
+        "is_finalist": true,
+        "games": 168,
+        "game_wins": 85,
+        "game_wr": 50.6,
+        "duels": 56,
+        "duel_wins": 25,
+        "duel_wr": 44.6
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 69,
+        "game_wins": 30,
+        "game_wr": 43.5,
+        "duels": 23,
+        "duel_wins": 9,
+        "duel_wr": 39.1
+      },
+      {
+        "name": "Vitor75",
+        "is_finalist": true,
+        "games": 66,
+        "game_wins": 39,
+        "game_wr": 59.1,
+        "duels": 22,
+        "duel_wins": 14,
+        "duel_wr": 63.6
+      },
+      {
+        "name": "Ryley",
+        "is_finalist": true,
+        "games": 57,
+        "game_wins": 29,
+        "game_wr": 50.9,
+        "duels": 19,
+        "duel_wins": 11,
+        "duel_wr": 57.9
+      },
+      {
+        "name": "Mugi",
+        "is_finalist": true,
+        "games": 46,
+        "game_wins": 21,
+        "game_wr": 45.7,
+        "duels": 15,
+        "duel_wins": 8,
+        "duel_wr": 53.3
+      }
+    ],
+    "adriel": [
+      {
+        "name": "Coco",
+        "is_finalist": false,
+        "games": 190,
+        "game_wins": 121,
+        "game_wr": 63.7,
+        "duels": 63,
+        "duel_wins": 41,
+        "duel_wr": 65.1
+      },
+      {
+        "name": "SandBox",
+        "is_finalist": true,
+        "games": 75,
+        "game_wins": 36,
+        "game_wr": 48.0,
+        "duels": 25,
+        "duel_wins": 10,
+        "duel_wr": 40.0
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 63,
+        "game_wins": 31,
+        "game_wr": 49.2,
+        "duels": 21,
+        "duel_wins": 9,
+        "duel_wr": 42.9
+      },
+      {
+        "name": "老板 Ι Batan’宙斯",
+        "is_finalist": false,
+        "games": 41,
+        "game_wins": 20,
+        "game_wr": 48.8,
+        "duels": 14,
+        "duel_wins": 6,
+        "duel_wr": 42.9
+      },
+      {
+        "name": "JorZ",
+        "is_finalist": true,
+        "games": 38,
+        "game_wins": 22,
+        "game_wr": 57.9,
+        "duels": 12,
+        "duel_wins": 6,
+        "duel_wr": 50.0
+      }
+    ],
+    "JorZ": [
+      {
+        "name": "Coco",
+        "is_finalist": false,
+        "games": 105,
+        "game_wins": 51,
+        "game_wr": 48.6,
+        "duels": 35,
+        "duel_wins": 15,
+        "duel_wr": 42.9
+      },
+      {
+        "name": "RUBIZALEZ",
+        "is_finalist": false,
+        "games": 59,
+        "game_wins": 30,
+        "game_wr": 50.8,
+        "duels": 18,
+        "duel_wins": 8,
+        "duel_wr": 44.4
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 57,
+        "game_wins": 18,
+        "game_wr": 31.6,
+        "duels": 19,
+        "duel_wins": 3,
+        "duel_wr": 15.8
+      },
+      {
+        "name": "Vitor75",
+        "is_finalist": true,
+        "games": 52,
+        "game_wins": 28,
+        "game_wr": 53.8,
+        "duels": 17,
+        "duel_wins": 10,
+        "duel_wr": 58.8
+      },
+      {
+        "name": "Rin✨安之",
+        "is_finalist": false,
+        "games": 40,
+        "game_wins": 21,
+        "game_wr": 52.5,
+        "duels": 12,
+        "duel_wins": 7,
+        "duel_wr": 58.3
+      }
+    ],
+    "Ryley": [
+      {
+        "name": "Vitor75",
+        "is_finalist": true,
+        "games": 126,
+        "game_wins": 75,
+        "game_wr": 59.5,
+        "duels": 42,
+        "duel_wins": 26,
+        "duel_wr": 61.9
+      },
+      {
+        "name": "SandBox",
+        "is_finalist": true,
+        "games": 60,
+        "game_wins": 31,
+        "game_wr": 51.7,
+        "duels": 20,
+        "duel_wins": 10,
+        "duel_wr": 50.0
+      },
+      {
+        "name": "Sub",
+        "is_finalist": true,
+        "games": 48,
+        "game_wins": 25,
+        "game_wr": 52.1,
+        "duels": 16,
+        "duel_wins": 8,
+        "duel_wr": 50.0
+      },
+      {
+        "name": "adriel",
+        "is_finalist": true,
+        "games": 46,
+        "game_wins": 16,
+        "game_wr": 34.8,
+        "duels": 14,
+        "duel_wins": 2,
+        "duel_wr": 14.3
+      },
+      {
+        "name": "老板 Ι Batan’宙斯",
+        "is_finalist": false,
+        "games": 45,
+        "game_wins": 25,
+        "game_wr": 55.6,
+        "duels": 15,
+        "duel_wins": 8,
+        "duel_wr": 53.3
+      }
+    ],
+    "Vitor75": [
+      {
+        "name": "Ryley",
+        "is_finalist": true,
+        "games": 126,
+        "game_wins": 51,
+        "game_wr": 40.5,
+        "duels": 42,
+        "duel_wins": 16,
+        "duel_wr": 38.1
+      },
+      {
+        "name": "SandBox",
+        "is_finalist": true,
+        "games": 91,
+        "game_wins": 42,
+        "game_wr": 46.2,
+        "duels": 29,
+        "duel_wins": 15,
+        "duel_wr": 51.7
+      },
+      {
+        "name": "Sub",
+        "is_finalist": true,
+        "games": 66,
+        "game_wins": 27,
+        "game_wr": 40.9,
+        "duels": 22,
+        "duel_wins": 8,
+        "duel_wr": 36.4
+      },
+      {
+        "name": "JorZ",
+        "is_finalist": true,
+        "games": 58,
+        "game_wins": 24,
+        "game_wr": 41.4,
+        "duels": 19,
+        "duel_wins": 7,
+        "duel_wr": 36.8
+      },
+      {
+        "name": "Mugi",
+        "is_finalist": true,
+        "games": 54,
+        "game_wins": 23,
+        "game_wr": 42.6,
+        "duels": 18,
+        "duel_wins": 6,
+        "duel_wr": 33.3
+      }
+    ],
+    "Guriko": [
+      {
+        "name": "Coco",
+        "is_finalist": false,
+        "games": 87,
+        "game_wins": 46,
+        "game_wr": 52.9,
+        "duels": 29,
+        "duel_wins": 14,
+        "duel_wr": 48.3
+      },
+      {
+        "name": "Steeef",
+        "is_finalist": false,
+        "games": 39,
+        "game_wins": 24,
+        "game_wr": 61.5,
+        "duels": 13,
+        "duel_wins": 9,
+        "duel_wr": 69.2
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 36,
+        "game_wins": 18,
+        "game_wr": 50.0,
+        "duels": 12,
+        "duel_wins": 5,
+        "duel_wr": 41.7
+      },
+      {
+        "name": "RUBIZALEZ",
+        "is_finalist": false,
+        "games": 36,
+        "game_wins": 22,
+        "game_wr": 61.1,
+        "duels": 12,
+        "duel_wins": 9,
+        "duel_wr": 75.0
+      },
+      {
+        "name": "JorZ",
+        "is_finalist": true,
+        "games": 33,
+        "game_wins": 20,
+        "game_wr": 60.6,
+        "duels": 11,
+        "duel_wins": 8,
+        "duel_wr": 72.7
+      }
+    ],
+    "Morten": [
+      {
+        "name": "EGW",
+        "is_finalist": false,
+        "games": 39,
+        "game_wins": 18,
+        "game_wr": 46.2,
+        "duels": 13,
+        "duel_wins": 5,
+        "duel_wr": 38.5
+      },
+      {
+        "name": "SK Dominik",
+        "is_finalist": false,
+        "games": 27,
+        "game_wins": 13,
+        "game_wr": 48.1,
+        "duels": 9,
+        "duel_wins": 5,
+        "duel_wr": 55.6
+      },
+      {
+        "name": "RUBIZALEZ",
+        "is_finalist": false,
+        "games": 26,
+        "game_wins": 12,
+        "game_wr": 46.2,
+        "duels": 8,
+        "duel_wins": 3,
+        "duel_wr": 37.5
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 21,
+        "game_wins": 9,
+        "game_wr": 42.9,
+        "duels": 7,
+        "duel_wins": 3,
+        "duel_wr": 42.9
+      },
+      {
+        "name": "Ryley",
+        "is_finalist": true,
+        "games": 21,
+        "game_wins": 9,
+        "game_wr": 42.9,
+        "duels": 7,
+        "duel_wins": 3,
+        "duel_wr": 42.9
+      }
+    ],
+    "Viiper": [
+      {
+        "name": "Ryley",
+        "is_finalist": true,
+        "games": 48,
+        "game_wins": 23,
+        "game_wr": 47.9,
+        "duels": 16,
+        "duel_wins": 8,
+        "duel_wr": 50.0
+      },
+      {
+        "name": "Ian77",
+        "is_finalist": false,
+        "games": 41,
+        "game_wins": 22,
+        "game_wr": 53.7,
+        "duels": 13,
+        "duel_wins": 8,
+        "duel_wr": 61.5
+      },
+      {
+        "name": "EGW",
+        "is_finalist": false,
+        "games": 24,
+        "game_wins": 12,
+        "game_wr": 50.0,
+        "duels": 8,
+        "duel_wins": 4,
+        "duel_wr": 50.0
+      },
+      {
+        "name": "adriel",
+        "is_finalist": true,
+        "games": 24,
+        "game_wins": 8,
+        "game_wr": 33.3,
+        "duels": 8,
+        "duel_wins": 2,
+        "duel_wr": 25.0
+      },
+      {
+        "name": "Guriko",
+        "is_finalist": true,
+        "games": 15,
+        "game_wins": 10,
+        "game_wr": 66.7,
+        "duels": 5,
+        "duel_wins": 4,
+        "duel_wr": 80.0
+      }
+    ],
+    "Woo": [
+      {
+        "name": "evolve✨律师",
+        "is_finalist": false,
+        "games": 9,
+        "game_wins": 1,
+        "game_wr": 11.1,
+        "duels": 3,
+        "duel_wins": 0,
+        "duel_wr": 0.0
+      },
+      {
+        "name": "SeeOk",
+        "is_finalist": false,
+        "games": 6,
+        "game_wins": 5,
+        "game_wr": 83.3,
+        "duels": 2,
+        "duel_wins": 2,
+        "duel_wr": 100.0
+      }
+    ],
+    "Hermit": [
+      {
+        "name": "Wallace",
+        "is_finalist": false,
+        "games": 58,
+        "game_wins": 27,
+        "game_wr": 46.6,
+        "duels": 19,
+        "duel_wins": 9,
+        "duel_wr": 47.4
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 55,
+        "game_wins": 19,
+        "game_wr": 34.5,
+        "duels": 17,
+        "duel_wins": 4,
+        "duel_wr": 23.5
+      },
+      {
+        "name": "たぁ",
+        "is_finalist": false,
+        "games": 54,
+        "game_wins": 18,
+        "game_wr": 33.3,
+        "duels": 18,
+        "duel_wins": 4,
+        "duel_wr": 22.2
+      },
+      {
+        "name": "Coco",
+        "is_finalist": false,
+        "games": 34,
+        "game_wins": 19,
+        "game_wr": 55.9,
+        "duels": 10,
+        "duel_wins": 6,
+        "duel_wr": 60.0
+      },
+      {
+        "name": "TMX I Mateja",
+        "is_finalist": false,
+        "games": 31,
+        "game_wins": 15,
+        "game_wr": 48.4,
+        "duels": 9,
+        "duel_wins": 5,
+        "duel_wr": 55.6
+      }
+    ],
+    "Midnight": [
+      {
+        "name": "SandBox",
+        "is_finalist": true,
+        "games": 66,
+        "game_wins": 18,
+        "game_wr": 27.3,
+        "duels": 22,
+        "duel_wins": 5,
+        "duel_wr": 22.7
+      },
+      {
+        "name": "adriel",
+        "is_finalist": true,
+        "games": 18,
+        "game_wins": 5,
+        "game_wr": 27.8,
+        "duels": 6,
+        "duel_wins": 2,
+        "duel_wr": 33.3
+      },
+      {
+        "name": "Clown",
+        "is_finalist": true,
+        "games": 15,
+        "game_wins": 4,
+        "game_wr": 26.7,
+        "duels": 5,
+        "duel_wins": 1,
+        "duel_wr": 20.0
+      }
+    ]
+  }
+}

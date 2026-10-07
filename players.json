@@ -1,0 +1,591 @@
+{
+  "generated": "2026-10-06",
+  "players": [
+    {
+      "handle": "Mohamed Light",
+      "tag": "#G9YV9GR8R",
+      "country": "Egypt",
+      "qual": "Season Golden Ticket (S1, S2, S4)",
+      "last_active": "2026-09-16",
+      "has_data": true,
+      "overall": {
+        "games": 578,
+        "game_wins": 423,
+        "game_wr": 73.2,
+        "duels": 192,
+        "duel_wins": 155,
+        "duel_wr": 80.7
+      },
+      "practice": {
+        "games": 486,
+        "game_wins": 350,
+        "game_wr": 72.0,
+        "duels": 152,
+        "duel_wins": 122,
+        "duel_wr": 80.3
+      },
+      "official": {
+        "games": 92,
+        "game_wins": 73,
+        "game_wr": 79.3,
+        "duels": 40,
+        "duel_wins": 33,
+        "duel_wr": 82.5
+      },
+      "practice_month": null,
+      "practice_partner_count": 17
+    },
+    {
+      "handle": "Pedro",
+      "tag": "#RJ88Y8U08",
+      "country": "Brazil",
+      "qual": "Season Golden Ticket",
+      "last_active": "2026-10-02",
+      "has_data": true,
+      "overall": {
+        "games": 445,
+        "game_wins": 257,
+        "game_wr": 57.8,
+        "duels": 153,
+        "duel_wins": 97,
+        "duel_wr": 63.4
+      },
+      "practice": {
+        "games": 349,
+        "game_wins": 193,
+        "game_wr": 55.3,
+        "duels": 115,
+        "duel_wins": 69,
+        "duel_wr": 60.0
+      },
+      "official": {
+        "games": 96,
+        "game_wins": 64,
+        "game_wr": 66.7,
+        "duels": 38,
+        "duel_wins": 28,
+        "duel_wr": 73.7
+      },
+      "practice_month": {
+        "games": 21,
+        "game_wins": 10,
+        "game_wr": 47.6,
+        "duels": 7,
+        "duel_wins": 3,
+        "duel_wr": 42.9
+      },
+      "practice_partner_count": 13
+    },
+    {
+      "handle": "SandBox",
+      "tag": "#Y022GRCJQ",
+      "country": "South Korea",
+      "qual": "Season Golden Ticket",
+      "last_active": "2026-10-02",
+      "has_data": true,
+      "overall": {
+        "games": 1173,
+        "game_wins": 611,
+        "game_wr": 52.1,
+        "duels": 392,
+        "duel_wins": 210,
+        "duel_wr": 53.6
+      },
+      "practice": {
+        "games": 1079,
+        "game_wins": 548,
+        "game_wr": 50.8,
+        "duels": 354,
+        "duel_wins": 182,
+        "duel_wr": 51.4
+      },
+      "official": {
+        "games": 94,
+        "game_wins": 63,
+        "game_wr": 67.0,
+        "duels": 38,
+        "duel_wins": 28,
+        "duel_wr": 73.7
+      },
+      "practice_month": {
+        "games": 33,
+        "game_wins": 14,
+        "game_wr": 42.4,
+        "duels": 11,
+        "duel_wins": 5,
+        "duel_wr": 45.5
+      },
+      "practice_partner_count": 25
+    },
+    {
+      "handle": "Clown",
+      "tag": "#GPPYR9JYR",
+      "country": "South Korea",
+      "qual": "Season Golden Ticket (S2, S4)",
+      "last_active": "2026-09-28",
+      "has_data": true,
+      "overall": {
+        "games": 1177,
+        "game_wins": 723,
+        "game_wr": 61.4,
+        "duels": 398,
+        "duel_wins": 269,
+        "duel_wr": 67.6
+      },
+      "practice": {
+        "games": 1092,
+        "game_wins": 655,
+        "game_wr": 60.0,
+        "duels": 361,
+        "duel_wins": 236,
+        "duel_wr": 65.4
+      },
+      "official": {
+        "games": 85,
+        "game_wins": 68,
+        "game_wr": 80.0,
+        "duels": 37,
+        "duel_wins": 33,
+        "duel_wr": 89.2
+      },
+      "practice_month": null,
+      "practice_partner_count": 28
+    },
+    {
+      "handle": "Mugi",
+      "tag": "#2CLV2RP0",
+      "country": "Japan",
+      "qual": "Season Golden Ticket (S5)",
+      "last_active": "2026-09-30",
+      "has_data": true,
+      "overall": {
+        "games": 383,
+        "game_wins": 228,
+        "game_wr": 59.5,
+        "duels": 134,
+        "duel_wins": 88,
+        "duel_wr": 65.7
+      },
+      "practice": {
+        "games": 297,
+        "game_wins": 164,
+        "game_wr": 55.2,
+        "duels": 97,
+        "duel_wins": 58,
+        "duel_wr": 59.8
+      },
+      "official": {
+        "games": 86,
+        "game_wins": 64,
+        "game_wr": 74.4,
+        "duels": 37,
+        "duel_wins": 30,
+        "duel_wr": 81.1
+      },
+      "practice_month": null,
+      "practice_partner_count": 9
+    },
+    {
+      "handle": "Sub",
+      "tag": "#U890Q9UQ",
+      "country": "Brazil",
+      "qual": "Leaderboard",
+      "last_active": "2026-10-02",
+      "has_data": true,
+      "overall": {
+        "games": 923,
+        "game_wins": 503,
+        "game_wr": 54.5,
+        "duels": 313,
+        "duel_wins": 177,
+        "duel_wr": 56.5
+      },
+      "practice": {
+        "games": 827,
+        "game_wins": 443,
+        "game_wr": 53.6,
+        "duels": 274,
+        "duel_wins": 150,
+        "duel_wr": 54.7
+      },
+      "official": {
+        "games": 96,
+        "game_wins": 60,
+        "game_wr": 62.5,
+        "duels": 39,
+        "duel_wins": 27,
+        "duel_wr": 69.2
+      },
+      "practice_month": {
+        "games": 21,
+        "game_wins": 12,
+        "game_wr": 57.1,
+        "duels": 7,
+        "duel_wins": 3,
+        "duel_wr": 42.9
+      },
+      "practice_partner_count": 25
+    },
+    {
+      "handle": "adriel",
+      "tag": "#9CPCC890",
+      "country": "Dominican Republic",
+      "qual": "Leaderboard",
+      "last_active": "2026-10-01",
+      "has_data": true,
+      "overall": {
+        "games": 935,
+        "game_wins": 567,
+        "game_wr": 60.6,
+        "duels": 318,
+        "duel_wins": 202,
+        "duel_wr": 63.5
+      },
+      "practice": {
+        "games": 850,
+        "game_wins": 508,
+        "game_wr": 59.8,
+        "duels": 282,
+        "duel_wins": 175,
+        "duel_wr": 62.1
+      },
+      "official": {
+        "games": 85,
+        "game_wins": 59,
+        "game_wr": 69.4,
+        "duels": 36,
+        "duel_wins": 27,
+        "duel_wr": 75.0
+      },
+      "practice_month": {
+        "games": 9,
+        "game_wins": 4,
+        "game_wr": 44.4,
+        "duels": 3,
+        "duel_wins": 1,
+        "duel_wr": 33.3
+      },
+      "practice_partner_count": 26
+    },
+    {
+      "handle": "JorZ",
+      "tag": "#22LC8JG02",
+      "country": "Spain",
+      "qual": "Leaderboard",
+      "last_active": "2026-10-04",
+      "has_data": true,
+      "overall": {
+        "games": 798,
+        "game_wins": 374,
+        "game_wr": 46.9,
+        "duels": 265,
+        "duel_wins": 117,
+        "duel_wr": 44.2
+      },
+      "practice": {
+        "games": 721,
+        "game_wins": 323,
+        "game_wr": 44.8,
+        "duels": 235,
+        "duel_wins": 95,
+        "duel_wr": 40.4
+      },
+      "official": {
+        "games": 77,
+        "game_wins": 51,
+        "game_wr": 66.2,
+        "duels": 30,
+        "duel_wins": 22,
+        "duel_wr": 73.3
+      },
+      "practice_month": {
+        "games": 27,
+        "game_wins": 12,
+        "game_wr": 44.4,
+        "duels": 9,
+        "duel_wins": 4,
+        "duel_wr": 44.4
+      },
+      "practice_partner_count": 25
+    },
+    {
+      "handle": "Ryley",
+      "tag": "#C0V0UQ9UY",
+      "country": "Canada",
+      "qual": "Leaderboard",
+      "last_active": "2026-10-01",
+      "has_data": true,
+      "overall": {
+        "games": 599,
+        "game_wins": 309,
+        "game_wr": 51.6,
+        "duels": 201,
+        "duel_wins": 100,
+        "duel_wr": 49.8
+      },
+      "practice": {
+        "games": 537,
+        "game_wins": 269,
+        "game_wr": 50.1,
+        "duels": 176,
+        "duel_wins": 82,
+        "duel_wr": 46.6
+      },
+      "official": {
+        "games": 62,
+        "game_wins": 40,
+        "game_wr": 64.5,
+        "duels": 25,
+        "duel_wins": 18,
+        "duel_wr": 72.0
+      },
+      "practice_month": {
+        "games": 21,
+        "game_wins": 11,
+        "game_wr": 52.4,
+        "duels": 7,
+        "duel_wins": 4,
+        "duel_wr": 57.1
+      },
+      "practice_partner_count": 16
+    },
+    {
+      "handle": "Vitor75",
+      "tag": "#8LJ92G8UG",
+      "country": "Portugal",
+      "qual": "Leaderboard",
+      "last_active": "2026-10-04",
+      "has_data": true,
+      "overall": {
+        "games": 730,
+        "game_wins": 320,
+        "game_wr": 43.8,
+        "duels": 245,
+        "duel_wins": 106,
+        "duel_wr": 43.3
+      },
+      "practice": {
+        "games": 640,
+        "game_wins": 268,
+        "game_wr": 41.9,
+        "duels": 210,
+        "duel_wins": 83,
+        "duel_wr": 39.5
+      },
+      "official": {
+        "games": 90,
+        "game_wins": 52,
+        "game_wr": 57.8,
+        "duels": 35,
+        "duel_wins": 23,
+        "duel_wr": 65.7
+      },
+      "practice_month": {
+        "games": 27,
+        "game_wins": 11,
+        "game_wr": 40.7,
+        "duels": 9,
+        "duel_wins": 3,
+        "duel_wr": 33.3
+      },
+      "practice_partner_count": 15
+    },
+    {
+      "handle": "Guriko",
+      "tag": "#2LJ0ULYCC",
+      "country": "Japan",
+      "qual": "Leaderboard",
+      "last_active": "2026-10-02",
+      "has_data": true,
+      "overall": {
+        "games": 652,
+        "game_wins": 391,
+        "game_wr": 60.0,
+        "duels": 223,
+        "duel_wins": 141,
+        "duel_wr": 63.2
+      },
+      "practice": {
+        "games": 562,
+        "game_wins": 332,
+        "game_wr": 59.1,
+        "duels": 186,
+        "duel_wins": 116,
+        "duel_wr": 62.4
+      },
+      "official": {
+        "games": 90,
+        "game_wins": 59,
+        "game_wr": 65.6,
+        "duels": 37,
+        "duel_wins": 25,
+        "duel_wr": 67.6
+      },
+      "practice_month": {
+        "games": 15,
+        "game_wins": 10,
+        "game_wr": 66.7,
+        "duels": 5,
+        "duel_wins": 4,
+        "duel_wr": 80.0
+      },
+      "practice_partner_count": 22
+    },
+    {
+      "handle": "Morten",
+      "tag": "#R09228V",
+      "country": "Germany",
+      "qual": "Leaderboard",
+      "last_active": "2026-09-02",
+      "has_data": true,
+      "overall": {
+        "games": 301,
+        "game_wins": 157,
+        "game_wr": 52.2,
+        "duels": 106,
+        "duel_wins": 56,
+        "duel_wr": 52.8
+      },
+      "practice": {
+        "games": 219,
+        "game_wins": 107,
+        "game_wr": 48.9,
+        "duels": 72,
+        "duel_wins": 33,
+        "duel_wr": 45.8
+      },
+      "official": {
+        "games": 82,
+        "game_wins": 50,
+        "game_wr": 61.0,
+        "duels": 34,
+        "duel_wins": 23,
+        "duel_wr": 67.6
+      },
+      "practice_month": null,
+      "practice_partner_count": 10
+    },
+    {
+      "handle": "Viiper",
+      "tag": "#U200V9P",
+      "country": "France",
+      "qual": "Leaderboard",
+      "last_active": "2026-09-30",
+      "has_data": true,
+      "overall": {
+        "games": 281,
+        "game_wins": 145,
+        "game_wr": 51.6,
+        "duels": 97,
+        "duel_wins": 51,
+        "duel_wr": 52.6
+      },
+      "practice": {
+        "games": 201,
+        "game_wins": 100,
+        "game_wr": 49.8,
+        "duels": 65,
+        "duel_wins": 32,
+        "duel_wr": 49.2
+      },
+      "official": {
+        "games": 80,
+        "game_wins": 45,
+        "game_wr": 56.2,
+        "duels": 32,
+        "duel_wins": 19,
+        "duel_wr": 59.4
+      },
+      "practice_month": null,
+      "practice_partner_count": 9
+    },
+    {
+      "handle": "Woo",
+      "tag": "#U2YVYGGV2",
+      "country": "South Korea",
+      "qual": "Last Chance Qualifier (winner)",
+      "last_active": "2026-08-15",
+      "has_data": true,
+      "overall": {
+        "games": 77,
+        "game_wins": 43,
+        "game_wr": 55.8,
+        "duels": 30,
+        "duel_wins": 18,
+        "duel_wr": 60.0
+      },
+      "practice": {
+        "games": 15,
+        "game_wins": 6,
+        "game_wr": 40.0,
+        "duels": 5,
+        "duel_wins": 2,
+        "duel_wr": 40.0
+      },
+      "official": {
+        "games": 62,
+        "game_wins": 37,
+        "game_wr": 59.7,
+        "duels": 25,
+        "duel_wins": 16,
+        "duel_wr": 64.0
+      },
+      "practice_month": null,
+      "practice_partner_count": 2
+    },
+    {
+      "handle": "Hermit",
+      "tag": "#C8CPUGRGP",
+      "country": "China",
+      "qual": "Clash Royale Champions Cup",
+      "last_active": "2026-09-29",
+      "has_data": true,
+      "overall": {
+        "games": 409,
+        "game_wins": 182,
+        "game_wr": 44.5,
+        "duels": 129,
+        "duel_wins": 54,
+        "duel_wr": 41.9
+      },
+      "practice": {
+        "games": 409,
+        "game_wins": 182,
+        "game_wr": 44.5,
+        "duels": 129,
+        "duel_wins": 54,
+        "duel_wr": 41.9
+      },
+      "official": null,
+      "practice_month": null,
+      "practice_partner_count": 16
+    },
+    {
+      "handle": "Midnight",
+      "tag": "#CUG8Y9PVV",
+      "country": "China",
+      "qual": "Clash Royale Champions Cup",
+      "last_active": "2026-09-28",
+      "has_data": true,
+      "overall": {
+        "games": 99,
+        "game_wins": 27,
+        "game_wr": 27.3,
+        "duels": 33,
+        "duel_wins": 8,
+        "duel_wr": 24.2
+      },
+      "practice": {
+        "games": 99,
+        "game_wins": 27,
+        "game_wr": 27.3,
+        "duels": 33,
+        "duel_wins": 8,
+        "duel_wr": 24.2
+      },
+      "official": null,
+      "practice_month": null,
+      "practice_partner_count": 3
+    }
+  ]
+}

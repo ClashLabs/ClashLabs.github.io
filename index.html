@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark light">
+<title>ClashLabs — Clash Royale Stats & Deck Tools</title>
+<meta name="description" content="ClashLabs — Clash Royale stats and deck tools. Win rates, head-to-head and fun facts for the 16 CRL 2026 World Finalists, plus a Deck Lab that finds the card synergies you can build. Unofficial fan project.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap topbar">
+    <div class="brand"><span class="logo">🧪</span> ClashLabs</div>
+    <nav class="main" id="nav">
+      <a href="#/" data-route="">Home</a>
+      <a href="#/finalists" data-route="finalists">Players</a>
+      <a href="#/h2h" data-route="h2h">Head-to-Head</a>
+      <a href="#/compare" data-route="compare">Compare</a>
+      <a href="#/facts" data-route="facts">Fun Facts</a>
+      <a href="#/lab" data-route="lab" id="navLab" hidden>Deck Lab</a>
+      <button class="theme-btn" id="themeBtn" title="Toggle light/dark" aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+<main><div class="wrap" id="app">Loading…</div></main>
+<footer class="ft"><div class="wrap">
+  This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy:
+  <a href="https://www.supercell.com/fan-content-policy" rel="noopener noreferrer" target="_blank">supercell.com/fan-content-policy</a>.
+  <span id="footgen"></span>
+</div></footer>
+<div id="tip"></div>
+<script src="app.js"></script>
+</body>
+</html>
