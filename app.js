@@ -296,6 +296,51 @@ function renderPlayer(handle) {
       <div><h2 class="sec" style="color:var(--lose)">Toughest</h2><div class="card">${rivRows(tough)}</div></div></div>`:''}`;
 }
 
+/* ============================ HOW IT WORKS ============================ */
+const HOW_STEPS = [
+  { t: 'Pick your starting point',
+    d: 'Search your player tag in Deck Lab, or choose a card in the Synergy Tree. No account or sign-in needed.',
+    sample: `<div class="hs-row"><div class="hs-input">#YOURTAG</div><div class="hs-btn">Look up</div></div>
+             <div class="hs-note">or pick a card to explore</div>
+             <div class="hs-chips"><span class="hs-chip">Hog Rider</span><span class="hs-chip">Graveyard</span><span class="hs-chip">Miner</span></div>` },
+  { t: 'We read what\'s public',
+    d: 'For Deck Lab, we read the cards and levels on your public account. Nothing private, nothing stored about you.',
+    sample: `<div class="hs-grid">${['Hog Rider','Fireball','Musketeer','Cannon','Ice Spirit','Skeletons'].map(n=>`<div class="hs-card">${n}<span class="hs-lv">Lv 14</span></div>`).join('')}</div>` },
+  { t: 'Matched to the competitive meta',
+    d: 'Your cards are matched against win rates from a large sample of competitive 1v1 play — which pairs over-perform, and by how much.',
+    sample: `<div class="hs-pair"><span>Elixir Collector <b>+</b> Inferno Dragon</span><span class="wr hi">91%</span></div>
+             <div class="hs-pair"><span>Hog Rider <b>+</b> Poison</span><span class="wr hi">75.6%</span></div>
+             <div class="hs-barlabel">win rate together · "lift" over playing them apart</div>` },
+  { t: 'Your result',
+    d: 'The strongest pairs you can build right now, your evolutions, or a synergy line to follow — ranked and explained.',
+    sample: `<div class="hs-res"><span class="hs-rk">1</span><span>Strongest pair you own</span><span class="wr hi">+33.8 lift</span></div>
+             <div class="hs-res"><span class="hs-rk">2</span><span>Your best evolution</span><span class="wr hi">59%</span></div>
+             <div class="hs-res"><span class="hs-rk">3</span><span>Next card to pair</span><span class="wr hi">72%</span></div>` },
+];
+function renderHow() {
+  app().innerHTML = `<h1 class="page">How ClashLabs works</h1>
+    <p class="sub">From a tag or a card to a ranked, explained suggestion — in four steps. All examples below use sample data.</p>
+    <div class="how">
+      <div class="how-stage"><div class="how-panels">
+        ${HOW_STEPS.map((s,i)=>`<div class="how-panel${i===0?' on':''}" data-p="${i}"><div class="hs-tag">Example</div>${s.sample}</div>`).join('')}
+      </div></div>
+      <ol class="how-steps">
+        ${HOW_STEPS.map((s,i)=>`<li class="how-step${i===0?' active':''}" data-s="${i}">
+          <div class="how-num">${i+1}</div><div><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></div></li>`).join('')}
+      </ol>
+    </div>
+    <p class="note" style="margin-top:22px">Ready? <a href="#/lab">Try Deck Lab</a> or <a href="#/tree">open the Synergy Tree</a>.</p>`;
+  const steps = [...app().querySelectorAll('.how-step')], panels = [...app().querySelectorAll('.how-panel')];
+  const setActive = i => { steps.forEach((s,j)=>s.classList.toggle('active', j===i)); panels.forEach((p,j)=>p.classList.toggle('on', j===i)); };
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) setActive(+e.target.dataset.s); });
+    }, { rootMargin: '-20% 0px -78% 0px', threshold: 0 });
+    steps.forEach(s => io.observe(s));
+  }
+  steps.forEach(s => s.addEventListener('click', () => setActive(+s.dataset.s)));
+}
+
 /* ============================ ROUTER ============================ */
 function render() {
   const parts = (location.hash||'#/').replace(/^#\//,'').split('/');
@@ -307,6 +352,7 @@ function render() {
     else if (route==='tree') renderTree();
     else if (route==='lab') renderDeckLab();
     else if (route==='finalists') renderFinalists();
+    else if (route==='how') renderHow();
     else renderHome();
   } catch(e){ app().innerHTML = `<p class="note">Something went wrong.</p>`; console.error(e); }
   scrollTo(0,0);
