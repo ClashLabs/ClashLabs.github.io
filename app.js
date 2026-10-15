@@ -56,9 +56,10 @@ function renderHome() {
     <h2 class="sec">Tools</h2>
     <div class="grid features">
       ${feat('#/tree','🌿','Synergy Tree','Start from a win condition and branch out to the cards that pair best with it — a synergy explorer built from competitive win rates.')}
+      ${feat('#/builder','🛠️','Deck Builder','Pick a win condition and get a full 8-card deck built from the cards that win together — then fine-tune any slot with data-backed swaps.')}
       ${feat('#/lab','🧪','Deck Lab','Enter your player tag to see your collection, your evolutions, and the strongest card pairs you can build right now.')}
       ${feat('#/finalists','🏆','World Finalists','Practice and official win rates, head-to-head records and partnerships for the 16 players at the 2026 World Finals.')}
-      ${feat('#/','⚔️','War Deck Builder','Build your four Clan War decks optimised to your card levels and evolutions. In the works.', true)}
+      ${feat('#/war','⚔️','War Deck Builder','Enter your tag and get four Clan War decks built from cards you own — no card reused, weighted to your maxed and evolved copies.')}
     </div>`;
 }
 
@@ -341,6 +342,124 @@ function renderHow() {
   steps.forEach(s => s.addEventListener('click', () => setActive(+s.dataset.s)));
 }
 
+/* ============================ DECK BUILDER (F1) ============================ */
+function bEngine() { if (!window._eng && SYN && window.DeckBuilder) window._eng = window.DeckBuilder.Engine(SYN); return window._eng; }
+function deckImg(c) { const i = synIcon(c); return i ? `<img loading="lazy" src="${esc(i)}" alt="">` : ''; }
+
+function renderBuilder() {
+  if (!SYN || !window.DeckBuilder) { app().innerHTML = `<h1 class="page">Deck Builder</h1><div class="card"><div class="note">Synergy data is still loading or out of date — try a full refresh (hold Shift and click reload).</div></div>`; return; }
+  const eng = bEngine();
+  const wincons = window.DeckBuilder.WINCONS.filter(c => SYN.cards[c]);
+  let html = `<h1 class="page">Deck Builder</h1>
+    <p class="sub">Pick a win condition and get a full 8-card deck built from the cards that actually win together — from ${SYN.games_analyzed.toLocaleString()} competitive 1v1 games. Then fine-tune any slot with data-backed swaps.</p>
+    <div class="tree-start"><input id="bldInput" list="bldlist" placeholder="Search any card to build around…" spellcheck="false">
+      <datalist id="bldlist">${Object.keys(SYN.cards).sort().map(c => `<option value="${esc(c)}">`).join('')}</datalist></div>
+    <h2 class="sec">Or start from a win condition</h2>
+    <div class="seedgrid">${wincons.map(c => `<button class="seed" data-bseed="${esc(c)}">${cardImg(c,22)}${esc(c)}</button>`).join('')}</div>`;
+  if (window._bDeck && window._bDeck.length) html += builtDeckHtml(eng);
+  app().innerHTML = html;
+  wireBuilder(eng);
+}
+
+function builtDeckHtml(eng) {
+  const deck = window._bDeck, seed = window._bSeed;
+  const wins = deck.filter(c => eng.fineRole(c) === 'wincon').length;
+  const spells = deck.filter(c => eng.roleOf(c) === 'spell').length;
+  let h = `<h2 class="sec" style="margin-top:24px">Your ${esc(seed)} deck</h2>
+    <div class="statrow" style="margin-bottom:14px">
+      <div class="stat"><div class="v mono">${eng.avgElixir(deck).toFixed(1)}</div><div class="k">avg elixir</div></div>
+      <div class="stat"><div class="v mono">${wins}</div><div class="k">win con${wins===1?'':'s'}</div></div>
+      <div class="stat"><div class="v mono">${spells}</div><div class="k">spells</div></div>
+      <button class="seed" id="bldCopy" style="align-self:center">⧉ Copy card list</button>
+      <button class="seed" id="bldReset" style="align-self:center">↺ Start over</button>
+    </div>
+    <div class="cardgrid bld-grid">` + deck.map((c, i) => {
+      const isSeed = c === seed, role = eng.fineRole(c);
+      return `<div class="ccard bld-tile${isSeed ? ' core' : ''}">
+        ${deckImg(c)}<div class="cnm">${esc(c)}</div>
+        <div class="bld-el mono">${eng.elixir(c)}<span class="mx"> elixir</span></div>
+        <div class="bld-role">${role}</div>
+        ${isSeed ? `<span class="bld-core-tag">CORE</span>` : `<button class="bld-swap" data-i="${i}">⇄ swap</button>`}
+      </div>`;
+    }).join('') + `</div>`;
+
+  if (window._bOpen != null && window._bOpen < deck.length) {
+    const i = window._bOpen, c = deck[i], sw = eng.swaps(deck, c, 4);
+    h += `<div class="card" style="margin-top:12px"><div class="note" style="margin-bottom:8px">Swap <b>${esc(c)}</b> for a same-role card that fits the rest of the deck:</div>
+      <div class="branches">` + (sw.length ? sw.map(s => `<button class="branch" data-swapto="${esc(s.card)}" data-i="${i}">
+        ${cardImg(s.card,34)}<span class="bn">${esc(s.card)}</span>
+        <span class="meta2"><span class="wr ${wrCls(s.wr)}">${s.wr}%</span><span class="lift">${eng.elixir(s.card)} elixir</span></span></button>`).join('')
+        : `<div class="note">No same-role alternative with enough data.</div>`) + `</div></div>`;
+  }
+
+  const pairs = eng.deckPairs(deck, 4);
+  if (pairs.length) h += `<h2 class="sec">Why these cards</h2>
+    <div class="synlist">` + pairs.map(p => `<div class="synpair"><div class="sp-cards">${esc(p.a)} <span class="plus">+</span> ${esc(p.b)}</div>
+      <div class="sp-stat">${p.lift >= 0 ? '+' : ''}${p.lift} lift together</div></div>`).join('') + `</div>`;
+  h += `<p class="note" style="margin-top:12px">Built by greedily pairing the highest-synergy cards around your win condition, keeping the deck legal (a spell, a cheap cycle card, at most one building). Swaps preserve each card's role so the deck still functions. Synergy is from public games — never from private scouting data.</p>`;
+  return h;
+}
+
+function wireBuilder(eng) {
+  const build = c => { if (!SYN.cards[c]) return; window._bSeed = c; window._bDeck = eng.buildDeck(c); window._bOpen = null; renderBuilder(); };
+  document.querySelectorAll('.seed[data-bseed]').forEach(b => b.addEventListener('click', () => build(b.dataset.bseed)));
+  const inp = document.getElementById('bldInput');
+  if (inp) inp.addEventListener('change', () => { const v = inp.value.trim(); const hit = Object.keys(SYN.cards).find(c => c.toLowerCase() === v.toLowerCase()); if (hit) build(hit); });
+  document.querySelectorAll('.bld-swap[data-i]').forEach(b => b.addEventListener('click', () => { window._bOpen = +b.dataset.i; renderBuilder(); }));
+  document.querySelectorAll('.branch[data-swapto]').forEach(b => b.addEventListener('click', () => {
+    const i = +b.dataset.i; window._bDeck[i] = b.dataset.swapto; window._bOpen = null; renderBuilder();
+  }));
+  const reset = document.getElementById('bldReset');
+  if (reset) reset.addEventListener('click', () => { window._bDeck = null; window._bSeed = null; window._bOpen = null; renderBuilder(); });
+  const copy = document.getElementById('bldCopy');
+  if (copy) copy.addEventListener('click', () => {
+    const txt = window._bDeck.join(', ');
+    try { navigator.clipboard.writeText(txt); copy.textContent = '✓ Copied'; setTimeout(() => { copy.textContent = '⧉ Copy card list'; }, 1400); }
+    catch (e) { copy.textContent = txt; }
+  });
+}
+
+/* ============================ WAR DECK BUILDER (F4) ============================ */
+function warResultHtml(eng, d) {
+  const owned = d.cards.map(c => ({ name: c.name, level: c.level, maxLevel: c.maxLevel, evolutionLevel: c.evolutionLevel }));
+  const decks = eng.warDecks(owned, 4);
+  if (!decks.length) return `<div class="card"><div class="note">Couldn't build four full decks from this collection — not enough distinct cards.</div></div>`;
+  const om = {}; d.cards.forEach(c => { om[c.name] = c; });
+  const evoTotal = decks.reduce((a, x) => a + x.evolutions, 0);
+  let h = `<div class="statrow" style="margin:2px 0 16px">
+      <div class="stat"><div class="v mono">${decks.length}</div><div class="k">war decks</div></div>
+      <div class="stat"><div class="v mono">${evoTotal}</div><div class="k">evolutions used</div></div>
+      <div class="stat"><div class="v mono">${d.cardsOwned}</div><div class="k">cards owned</div></div>
+    </div>`;
+  h += decks.map((dk, i) => `<h2 class="sec">Deck ${i + 1} — ${esc(dk.seed)}
+      <span class="note" style="font-weight:500">· ${dk.avgElixir.toFixed(1)} avg elixir · ${Math.round(dk.avgLevelFrac * 100)}% leveled · ${dk.evolutions} evo</span></h2>
+    <div class="cardgrid bld-grid">${dk.cards.map(c => ccard(om[c] || { name: c })).join('')}</div>`).join('');
+  h += `<p class="note" style="margin-top:14px">Each deck uses only cards you own, no card appears in two decks, and the picks are weighted toward your higher-level and evolved copies as well as synergy. Reads only your public account; synergy is from public games, never private scouting data.</p>`;
+  return h;
+}
+
+function renderWar() {
+  if (!SYN || !window.DeckBuilder) { app().innerHTML = `<h1 class="page">War Deck Builder</h1><div class="card"><div class="note">Synergy data is still loading or out of date — try a full refresh (hold Shift and click reload).</div></div>`; return; }
+  if (!CONFIG.apiBase) { app().innerHTML = `<h1 class="page">War Deck Builder</h1><div class="card"><div class="note">The lookup service isn't connected yet.</div></div>`; return; }
+  const eng = bEngine();
+  const tag = window._warTag || '', d = window._warData, err = window._warErr, loading = window._warLoading;
+  let body = '';
+  if (loading) body = `<div class="card"><div class="note">Looking up ${esc(tag)}…</div></div>`;
+  else if (err) body = `<div class="card"><div class="note" style="color:var(--lose)">${esc(err)}</div></div>`;
+  else if (d) body = warResultHtml(eng, d);
+  app().innerHTML = `<h1 class="page">War Deck Builder</h1>
+    <p class="sub">Enter your player tag for four Clan War decks built from cards you own — no card reused across decks, weighted toward your maxed and evolved copies and the synergies that win. Reads only your public account.</p>
+    <form class="labsearch" id="warForm" autocomplete="off"><input id="warInput" placeholder="#YOURTAG" value="${esc(tag)}" maxlength="16" spellcheck="false"><button type="submit">Build war decks</button></form>${body}`;
+  document.getElementById('warForm').addEventListener('submit', async e => {
+    e.preventDefault(); const v = document.getElementById('warInput').value.trim(); if (!v) return;
+    window._warTag = v; window._warLoading = true; window._warErr = null; window._warData = null; renderWar();
+    try { const r = await fetch(CONFIG.apiBase + '/api/player?tag=' + encodeURIComponent(v.replace(/^#/, ''))); const j = await r.json();
+      window._warLoading = false; if (!r.ok) window._warErr = j.message || 'Lookup failed.'; else window._warData = j; }
+    catch (x) { window._warLoading = false; window._warErr = 'Could not reach the lookup service.'; }
+    renderWar();
+  });
+}
+
 /* ============================ ROUTER ============================ */
 function render() {
   const parts = (location.hash||'#/').replace(/^#\//,'').split('/');
@@ -350,6 +469,8 @@ function render() {
   try {
     if (route==='p') renderPlayer(decodeURIComponent(parts[1]||''));
     else if (route==='tree') renderTree();
+    else if (route==='builder') renderBuilder();
+    else if (route==='war') renderWar();
     else if (route==='lab') renderDeckLab();
     else if (route==='finalists') renderFinalists();
     else if (route==='how') renderHow();
