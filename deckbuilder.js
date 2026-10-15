@@ -17,8 +17,21 @@
     'Balloon', 'Mortar', 'Golem', 'Giant', 'Lava Hound', 'Goblin Drill', 'Three Musketeers',
     'Elixir Golem', 'Mega Knight', 'Royal Hogs', 'Wall Breakers'];
 
+  // Cards that can target AIR (conservative — unknowns omitted, so the guarantee can only
+  // over-provide anti-air, never falsely claim it). Troops + buildings only.
+  var AIR = ['Archer Queen', 'Archers', 'Baby Dragon', 'Bats', 'Dart Goblin', 'Electro Dragon',
+    'Electro Spirit', 'Electro Wizard', 'Executioner', 'Firecracker', 'Fire Spirit', 'Flying Machine',
+    'Hunter', 'Ice Wizard', 'Inferno Dragon', 'Inferno Tower', 'Little Prince', 'Magic Archer',
+    'Mega Minion', 'Minion Horde', 'Minions', 'Mother Witch', 'Musketeer', 'Phoenix', 'Princess',
+    'Skeleton Dragons', 'Spear Goblins', 'Tesla', 'Witch', 'Wizard', 'Zappies'];
+  // Cards that deal SPLASH / area damage (troops + buildings).
+  var SPLASH = ['Baby Dragon', 'Bomb Tower', 'Bomber', 'Bowler', 'Dark Prince', 'Electro Dragon',
+    'Executioner', 'Fire Spirit', 'Firecracker', 'Giant Skeleton', 'Ice Wizard', 'Magic Archer',
+    'Mega Knight', 'Mother Witch', 'Princess', 'Sparky', 'Valkyrie', 'Witch', 'Wizard'];
+
   function toSet(a) { var s = {}; a.forEach(function (x) { s[x] = 1; }); return s; }
   var SPELL_SET = toSet(SPELLS), BUILD_SET = toSet(BUILDINGS), WIN_SET = toSet(WINCONS);
+  var AIR_SET = toSet(AIR), SPLASH_SET = toSet(SPLASH);
 
   // Coarse role (for the one-building / spell-cap rules).
   function roleOf(c) { return SPELL_SET[c] ? 'spell' : (BUILD_SET[c] ? 'building' : 'troop'); }
@@ -67,7 +80,14 @@
       var localAll = opts.pool ? opts.pool.filter(function (c) { return cards[c]; }) : ALL;
       if (localAll.indexOf(seed) < 0) localAll = [seed].concat(localAll);
       var wfn = opts.weight || function () { return 0; };
-      function score(c, set) { return affinity(c, set) + wfn(c); }
+      // Need-based nudge: while the deck has no anti-air / no splash, prefer cards that add it.
+      function needBonus(c) {
+        var b = 0;
+        if (AIR_SET[c] && !deck.some(function (x) { return AIR_SET[x]; })) b += 6;
+        if (SPLASH_SET[c] && !deck.some(function (x) { return SPLASH_SET[x]; })) b += 3;
+        return b;
+      }
+      function score(c, set) { return affinity(c, set) + wfn(c) + needBonus(c); }
 
       var deck = [];
       function add(c) { if (c && deck.indexOf(c) < 0 && deck.length < 8) deck.push(c); }
@@ -127,6 +147,22 @@
           var alt = localAll.filter(function (c) { return deck.indexOf(c) < 0 && roleOf(c) === 'troop' && elixir(c) <= 3; })
             .sort(function (a, b) { return score(b, rest) - score(a, rest); })[0];
           if (alt) deck[deck.indexOf(heavy)] = alt;
+        }
+      }
+
+      // Anti-air guarantee: if the deck somehow ended with no air-targeting card, swap the
+      // weakest-fit non-seed troop for the best available air-capable card.
+      if (!deck.some(function (c) { return AIR_SET[c]; })) {
+        var swappable = deck.slice(1).filter(function (c) { return roleOf(c) === 'troop' && !WIN_SET[c]; });
+        if (swappable.length) {
+          var weakest = swappable.sort(function (a, b) {
+            var ra = deck.filter(function (x) { return x !== a; }), rb = deck.filter(function (x) { return x !== b; });
+            return affinity(a, ra) - affinity(b, rb);
+          })[0];
+          var rest2 = deck.filter(function (c) { return c !== weakest; });
+          var airAlt = localAll.filter(function (c) { return deck.indexOf(c) < 0 && AIR_SET[c] && roleOf(c) === 'troop'; })
+            .sort(function (a, b) { return affinity(b, rest2) - affinity(a, rest2); })[0];
+          if (airAlt) deck[deck.indexOf(weakest)] = airAlt;
         }
       }
       return deck;

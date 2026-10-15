@@ -257,3 +257,11 @@ footer.ft .wrap { color:var(--muted); font-size:11.5px; line-height:1.6; }
 .bld-tile .bld-swap:hover { border-color:var(--accent); color:var(--accent); }
 .bld-tile .bld-core-tag { margin-top:7px; font-size:9px; font-weight:800; letter-spacing:.06em; color:var(--accent);
   border:1px solid var(--accent); border-radius:6px; padding:2px 7px; }
+
+/* ---- Synergy Map (card×card matrix) ---- */
+table.heat.mx th.colh span { writing-mode:horizontal-tb; transform:none; }
+table.heat.mx th.colh img { width:24px; height:auto; display:block; margin:0 auto; }
+table.heat.mx th.rowh { width:auto; }
+table.heat.mx th.rowh img { width:20px; height:auto; vertical-align:middle; margin-right:6px; }
+table.heat.mx td { width:34px; height:34px; }
+table.heat.mx td.mx-diag { background:var(--surface2); color:var(--ink2); font-weight:800; }

@@ -56,6 +56,7 @@ function renderHome() {
     <h2 class="sec">Tools</h2>
     <div class="grid features">
       ${feat('#/tree','🌿','Synergy Tree','Start from a win condition and branch out to the cards that pair best with it — a synergy explorer built from competitive win rates.')}
+      ${feat('#/map','🔥','Synergy Map','A card×card heatmap — a card\'s closest partners and how they pair with each other. Tight blue blocks are mini-archetypes.')}
       ${feat('#/builder','🛠️','Deck Builder','Pick a win condition and get a full 8-card deck built from the cards that win together — then fine-tune any slot with data-backed swaps.')}
       ${feat('#/lab','🧪','Deck Lab','Enter your player tag to see your collection, your evolutions, and the strongest card pairs you can build right now.')}
       ${feat('#/finalists','🏆','World Finalists','Practice and official win rates, head-to-head records and partnerships for the 16 players at the 2026 World Finals.')}
@@ -419,6 +420,61 @@ function wireBuilder(eng) {
   });
 }
 
+/* ============================ SYNERGY MAP (card×card matrix) ============================ */
+function matrixHeat(l) {
+  if (l == null) return { bg: 'transparent', fg: 'var(--muted)' };
+  const win = hx(getComputedStyle(document.documentElement).getPropertyValue('--win').trim() || '#2a78d6');
+  const lose = hx(getComputedStyle(document.documentElement).getPropertyValue('--lose').trim() || '#e34948');
+  const mid = [150, 150, 148];
+  const t = Math.max(-1, Math.min(1, l / 25));
+  const c = t >= 0 ? mix(mid, win, t) : mix(mid, lose, -t);
+  const lum = (0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]) / 255;
+  return { bg: `rgb(${c.join(',')})`, fg: lum > 0.6 ? '#0b0b0b' : '#fff' };
+}
+
+function renderMatrix() {
+  if (!SYN || !SYN.partners) { app().innerHTML = `<h1 class="page">Synergy Map</h1><div class="card"><div class="note">Synergy data is still loading or out of date — try a full refresh (hold Shift and click reload).</div></div>`; return; }
+  const focus = (window._mxFocus && SYN.partners[window._mxFocus]) ? window._mxFocus : (SYN.partners['Hog Rider'] ? 'Hog Rider' : Object.keys(SYN.partners)[0]);
+  const partners = (SYN.partners[focus] || []).slice(0, 11).map(p => p.card);
+  const list = [focus].concat(partners);
+  const liftOf = (a, b) => {
+    if (a === b) return null;
+    const la = SYN.partners[a] || []; for (const e of la) if (e.card === b) return e;
+    const lb = SYN.partners[b] || []; for (const e of lb) if (e.card === a) return e;
+    return null;
+  };
+  const picks = ['Hog Rider','Golem','Graveyard','X-Bow','Miner','Lava Hound','Balloon','Mega Knight'].filter(c => SYN.partners[c]);
+
+  let html = `<h1 class="page">Synergy Map</h1>
+    <p class="sub">A card's closest partners — and how they pair with <em>each other</em>. Each cell is the "lift" between two cards (how much better they do together than apart), from ${SYN.games_analyzed.toLocaleString()} competitive games. Blue is strong synergy, red is anti-synergy; the diagonal is each card's solo win rate.</p>
+    <div class="tree-start"><input id="mxInput" list="mxlist" placeholder="Search any card to centre the map…" spellcheck="false">
+      <datalist id="mxlist">${Object.keys(SYN.partners).sort().map(c => `<option value="${esc(c)}">`).join('')}</datalist></div>
+    <div class="seedgrid" style="margin-bottom:4px">${picks.map(c => `<button class="seed${c===focus?' on':''}" data-mx="${esc(c)}">${cardImg(c,20)}${esc(c)}</button>`).join('')}</div>
+    <h2 class="sec">Centred on ${esc(focus)}</h2>
+    <div class="card" style="padding:12px"><div class="heat-scroll"><table class="heat mx"><thead><tr><th></th>`
+    + list.map(c => `<th class="colh"><span title="${esc(c)}">${cardImg(c,24) || esc(c).slice(0,3)}</span></th>`).join('') + `</tr></thead><tbody>`;
+  list.forEach(r => {
+    html += `<tr><th class="rowh">${cardImg(r,20)}<span>${esc(r)}</span></th>`;
+    list.forEach(c => {
+      if (r === c) { const w = (SYN.cards[r] || {}).wr; html += `<td class="mx-diag" data-tip="${esc(r)} — ${w != null ? w + '% solo win rate' : 'no solo data'}">${w != null ? Math.round(w) : '·'}</td>`; return; }
+      const e = liftOf(r, c);
+      if (!e) { html += `<td class="empty" data-tip="${esc(r)} + ${esc(c)} — no strong pairing recorded">·</td>`; return; }
+      const col = matrixHeat(e.lift);
+      html += `<td data-bg="${col.bg}" data-fg="${col.fg}" data-tip="${esc(r)} + ${esc(c)} — ${e.lift >= 0 ? '+' : ''}${e.lift} lift · ${e.wr}% win · ${e.games}g">${e.lift >= 0 ? '+' : ''}${e.lift}</td>`;
+    });
+    html += `</tr>`;
+  });
+  html += `</tbody></table></div></div>
+    <p class="note" style="margin-top:10px">The first row and column are ${esc(focus)} with each partner. The inner cells show which of those partners also synergise with <em>each other</em> — a tight block of blue is a mini-archetype. Hover any cell for the exact numbers.</p>`;
+  app().innerHTML = html;
+  app().querySelectorAll('td[data-bg]').forEach(td => { td.style.background = td.dataset.bg; td.style.color = td.dataset.fg; });
+  app().querySelectorAll('td[data-tip]').forEach(td => bindTip(td, td.dataset.tip));
+  const pick = c => { if (SYN.partners[c]) { window._mxFocus = c; renderMatrix(); } };
+  document.querySelectorAll('.seed[data-mx]').forEach(b => b.addEventListener('click', () => pick(b.dataset.mx)));
+  const inp = document.getElementById('mxInput');
+  if (inp) inp.addEventListener('change', () => { const v = inp.value.trim(); const hit = Object.keys(SYN.partners).find(c => c.toLowerCase() === v.toLowerCase()); if (hit) pick(hit); });
+}
+
 /* ============================ WAR DECK BUILDER (F4) ============================ */
 function warResultHtml(eng, d) {
   const owned = d.cards.map(c => ({ name: c.name, level: c.level, maxLevel: c.maxLevel, evolutionLevel: c.evolutionLevel }));
@@ -469,6 +525,7 @@ function render() {
   try {
     if (route==='p') renderPlayer(decodeURIComponent(parts[1]||''));
     else if (route==='tree') renderTree();
+    else if (route==='map') renderMatrix();
     else if (route==='builder') renderBuilder();
     else if (route==='war') renderWar();
     else if (route==='lab') renderDeckLab();
