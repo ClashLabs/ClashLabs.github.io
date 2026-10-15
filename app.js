@@ -1,4 +1,4 @@
-/* ClashLabs — competitive Clash Royale analytics. Self-contained, reads data/*.json. */
+/* ClashLabs, competitive Clash Royale analytics. Self-contained, reads data/*.json. */
 'use strict';
 const DATA = {};
 let CONFIG = { apiBase: '' };
@@ -43,6 +43,18 @@ function renderHome() {
   const sum = k => P().reduce((a,p) => a + (p[k] && p[k].games ? p[k].games : 0), 0);
   const feat = (href, ic, title, desc, soon) => `<a class="feat" href="${soon ? '#/' : href}"${soon?' onclick="return false" style="cursor:default"':''}>
     <div class="ic">${ic}</div><h3>${title}</h3><p>${desc}</p>${soon?'<span class="soon">Coming soon</span>':''}</a>`;
+  // Live example: a real deck the engine builds right now, shown as the hero centrepiece.
+  let demo = '';
+  try {
+    if (window.DeckBuilder && SYN) {
+      const eng = bEngine(), d = eng.buildDeck('Hog Rider');
+      demo = `<div class="hero-demo">
+        <div class="hd-label">A Hog Rider deck the builder just made, live · ${eng.avgElixir(d).toFixed(1)} avg elixir</div>
+        <div class="hd-cards">${d.map(c => `<span class="hd-card" title="${esc(c)}">${deckImg(c) || esc(c).slice(0,3)}</span>`).join('')}</div>
+        <a class="hd-cta" href="#/builder">Build your own →</a>
+      </div>`;
+    }
+  } catch (e) { demo = ''; }
   app().innerHTML = `
     <div class="hero">
       <h1>Competitive Clash Royale analytics</h1>
@@ -52,15 +64,16 @@ function renderHome() {
         <div class="s"><b class="mono">${nCards}</b><span>cards ranked</span></div>
         <div class="s"><b class="mono">16</b><span>world finalists</span></div>
       </div>`:''}
+      ${demo}
     </div>
     <h2 class="sec">Tools</h2>
     <div class="grid features">
-      ${feat('#/tree','🌿','Synergy Tree','Start from a win condition and branch out to the cards that pair best with it — a synergy explorer built from competitive win rates.')}
-      ${feat('#/map','🔥','Synergy Map','A card×card heatmap — a card\'s closest partners and how they pair with each other. Tight blue blocks are mini-archetypes.')}
-      ${feat('#/builder','🛠️','Deck Builder','Pick a win condition and get a full 8-card deck built from the cards that win together — then fine-tune any slot with data-backed swaps.')}
+      ${feat('#/tree','🌿','Synergy Tree','Start from a win condition and branch out to the cards that pair best with it, a synergy explorer built from competitive win rates.')}
+      ${feat('#/map','🔥','Synergy Map','A card×card heatmap, a card\'s closest partners and how they pair with each other. Tight blue blocks are mini-archetypes.')}
+      ${feat('#/builder','🛠️','Deck Builder','Pick a win condition and get a full 8-card deck built from the cards that win together, then fine-tune any slot with data-backed swaps.')}
       ${feat('#/lab','🧪','Deck Lab','Enter your player tag to see your collection, your evolutions, and the strongest card pairs you can build right now.')}
       ${feat('#/finalists','🏆','World Finalists','Practice and official win rates, head-to-head records and partnerships for the 16 players at the 2026 World Finals.')}
-      ${feat('#/war','⚔️','War Deck Builder','Enter your tag and get four Clan War decks built from cards you own — no card reused, weighted to your maxed and evolved copies.')}
+      ${feat('#/war','⚔️','War Deck Builder','Enter your tag and get four Clan War decks built from cards you own, no card reused, weighted to your maxed and evolved copies.')}
     </div>`;
 }
 
@@ -73,11 +86,11 @@ function treeState() { if (!window._line) window._line = []; return window._line
 function cardImg(n, w) { const i = synIcon(n); return i ? `<img src="${esc(i)}" alt="" style="width:${w}px">` : ''; }
 
 function renderTree() {
-  if (!SYN || !SYN.partners) { app().innerHTML = `<h1 class="page">Synergy Tree</h1><div class="card"><div class="note">Synergy data is still loading or out of date — try a full refresh (hold Shift and click reload).</div></div>`; return; }
+  if (!SYN || !SYN.partners) { app().innerHTML = `<h1 class="page">Synergy Tree</h1><div class="card"><div class="note">Synergy data is still loading or out of date, try a full refresh (hold Shift and click reload).</div></div>`; return; }
   const line = treeState();
   const seeds = SEED_WINCONS.filter(c => SYN.partners[c]).slice(0, 14);
   let html = `<h1 class="page">Synergy Tree</h1>
-    <p class="sub">Pick a card, then follow the branches to the cards it pairs best with. Each branch shows how often that pairing wins and its "lift" — how much better the two do together than apart. Built from ${SYN.games_analyzed.toLocaleString()} competitive 1v1 games.</p>`;
+    <p class="sub">Pick a card, then follow the branches to the cards it pairs best with. Each branch shows how often that pairing wins and its "lift", how much better the two do together than apart. Built from ${SYN.games_analyzed.toLocaleString()} competitive 1v1 games.</p>`;
 
   if (!line.length) {
     html += `<div class="tree-start"><input id="treeInput" list="cardlist" placeholder="Search any card to start…" spellcheck="false"></div>
@@ -162,7 +175,7 @@ function renderDeckLab() {
   if (!CONFIG.apiBase) { app().innerHTML = `<h1 class="page">Deck Lab</h1><div class="card"><div class="note">The lookup service isn't connected yet.</div></div>`; return; }
   const tag = window._labTag||'', d = window._labData, err = window._labErr, loading = window._labLoading;
   let body = '';
-  if (loading) body = `<div class="card"><div class="note">Looking up ${esc(tag)}…</div></div>`;
+  if (loading) body = skelDeck('Looking up ' + tag + '…');
   else if (err) body = `<div class="card"><div class="note" style="color:var(--lose)">${esc(err)}</div></div>`;
   else if (d) { const evoN = d.cards.filter(c=>c.evolutionLevel>0).length;
     body = `<div class="statrow"><div class="stat"><div class="v mono">${d.cardsOwned}</div><div class="k">cards</div></div>
@@ -189,7 +202,7 @@ function pWR(p, cat) { const c = p[cat]; return c && c.duels ? c.duel_wr : null;
 function renderFinalists() {
   const tabs = [['players','Players'],['h2h','Head-to-Head'],['compare','Compare'],['leaders','Leaders']];
   let html = `<h1 class="page">CRL World Finalists</h1>
-    <p class="sub">The 16 players at the 2026 World Finals — practice and official win rates, how they match up against each other, and who they practise with. From a sample of public battles; win rate is the share of best-of sets won.</p>
+    <p class="sub">The 16 players at the 2026 World Finals, practice and official win rates, how they match up against each other, and who they practise with. From a sample of public battles; win rate is the share of best-of sets won.</p>
     <div class="seg" id="finseg">${tabs.map(t=>`<button data-t="${t[0]}" class="${t[0]===finTab?'on':''}">${t[1]}</button>`).join('')}</div>
     <div style="margin-top:16px" id="finbody"></div>`;
   app().innerHTML = html;
@@ -245,8 +258,8 @@ function finH2H() {
     for (const c of order) { if (r===c){ h+=`<td class="self"></td>`; continue; }
       const cell = M[r]&&M[r][c] ? M[r][c].all : null;
       if (!cell||!cell.duels){ h+=`<td class="empty">·</td>`; continue; }
-      if (cell.duels<MIN_DUELS){ h+=`<td class="empty" data-tip="${esc(r)} vs ${esc(c)} — ${cell.games}g (small sample)">${cell.duel_wr}</td>`; }
-      else { const col=heat(cell.duel_wr); h+=`<td data-bg="${col.bg}" data-fg="${col.fg}" data-tip="${esc(r)} vs ${esc(c)} — ${cell.games} games, ${cell.duels} duels · ${cell.duel_wr}% duel WR">${cell.duel_wr}</td>`; } }
+      if (cell.duels<MIN_DUELS){ h+=`<td class="empty" data-tip="${esc(r)} vs ${esc(c)}, ${cell.games}g (small sample)">${cell.duel_wr}</td>`; }
+      else { const col=heat(cell.duel_wr); h+=`<td data-bg="${col.bg}" data-fg="${col.fg}" data-tip="${esc(r)} vs ${esc(c)}, ${cell.games} games, ${cell.duels} duels · ${cell.duel_wr}% duel WR">${cell.duel_wr}</td>`; } }
     h += `</tr>`; }
   return h + `</tbody></table></div></div>`;
 }
@@ -309,19 +322,19 @@ const HOW_STEPS = [
     d: 'For Deck Lab, we read the cards and levels on your public account. Nothing private, nothing stored about you.',
     sample: `<div class="hs-grid">${['Hog Rider','Fireball','Musketeer','Cannon','Ice Spirit','Skeletons'].map(n=>`<div class="hs-card">${n}<span class="hs-lv">Lv 14</span></div>`).join('')}</div>` },
   { t: 'Matched to the competitive meta',
-    d: 'Your cards are matched against win rates from a large sample of competitive 1v1 play — which pairs over-perform, and by how much.',
+    d: 'Your cards are matched against win rates from a large sample of competitive 1v1 play, which pairs over-perform, and by how much.',
     sample: `<div class="hs-pair"><span>Elixir Collector <b>+</b> Inferno Dragon</span><span class="wr hi">91%</span></div>
              <div class="hs-pair"><span>Hog Rider <b>+</b> Poison</span><span class="wr hi">75.6%</span></div>
              <div class="hs-barlabel">win rate together · "lift" over playing them apart</div>` },
   { t: 'Your result',
-    d: 'The strongest pairs you can build right now, your evolutions, or a synergy line to follow — ranked and explained.',
+    d: 'The strongest pairs you can build right now, your evolutions, or a synergy line to follow, ranked and explained.',
     sample: `<div class="hs-res"><span class="hs-rk">1</span><span>Strongest pair you own</span><span class="wr hi">+33.8 lift</span></div>
              <div class="hs-res"><span class="hs-rk">2</span><span>Your best evolution</span><span class="wr hi">59%</span></div>
              <div class="hs-res"><span class="hs-rk">3</span><span>Next card to pair</span><span class="wr hi">72%</span></div>` },
 ];
 function renderHow() {
   app().innerHTML = `<h1 class="page">How ClashLabs works</h1>
-    <p class="sub">From a tag or a card to a ranked, explained suggestion — in four steps. All examples below use sample data.</p>
+    <p class="sub">From a tag or a card to a ranked, explained suggestion, in four steps. All examples below use sample data.</p>
     <div class="how">
       <div class="how-stage"><div class="how-panels">
         ${HOW_STEPS.map((s,i)=>`<div class="how-panel${i===0?' on':''}" data-p="${i}"><div class="hs-tag">Example</div>${s.sample}</div>`).join('')}
@@ -346,13 +359,15 @@ function renderHow() {
 /* ============================ DECK BUILDER (F1) ============================ */
 function bEngine() { if (!window._eng && SYN && window.DeckBuilder) window._eng = window.DeckBuilder.Engine(SYN); return window._eng; }
 function deckImg(c) { const i = synIcon(c); return i ? `<img loading="lazy" src="${esc(i)}" alt="">` : ''; }
+function skelDeck(label) { return `<div class="note" style="margin:4px 0 10px">${esc(label)}</div>
+  <div class="skel-grid">${new Array(8).fill('<div class="skel skel-tile"></div>').join('')}</div>`; }
 
 function renderBuilder() {
-  if (!SYN || !window.DeckBuilder) { app().innerHTML = `<h1 class="page">Deck Builder</h1><div class="card"><div class="note">Synergy data is still loading or out of date — try a full refresh (hold Shift and click reload).</div></div>`; return; }
+  if (!SYN || !window.DeckBuilder) { app().innerHTML = `<h1 class="page">Deck Builder</h1><div class="card"><div class="note">Synergy data is still loading or out of date, try a full refresh (hold Shift and click reload).</div></div>`; return; }
   const eng = bEngine();
   const wincons = window.DeckBuilder.WINCONS.filter(c => SYN.cards[c]);
   let html = `<h1 class="page">Deck Builder</h1>
-    <p class="sub">Pick a win condition and get a full 8-card deck built from the cards that actually win together — from ${SYN.games_analyzed.toLocaleString()} competitive 1v1 games. Then fine-tune any slot with data-backed swaps.</p>
+    <p class="sub">Pick a win condition and get a full 8-card deck built from the cards that actually win together, from ${SYN.games_analyzed.toLocaleString()} competitive 1v1 games. Then fine-tune any slot with data-backed swaps.</p>
     <div class="tree-start"><input id="bldInput" list="bldlist" placeholder="Search any card to build around…" spellcheck="false">
       <datalist id="bldlist">${Object.keys(SYN.cards).sort().map(c => `<option value="${esc(c)}">`).join('')}</datalist></div>
     <h2 class="sec">Or start from a win condition</h2>
@@ -397,7 +412,7 @@ function builtDeckHtml(eng) {
   if (pairs.length) h += `<h2 class="sec">Why these cards</h2>
     <div class="synlist">` + pairs.map(p => `<div class="synpair"><div class="sp-cards">${esc(p.a)} <span class="plus">+</span> ${esc(p.b)}</div>
       <div class="sp-stat">${p.lift >= 0 ? '+' : ''}${p.lift} lift together</div></div>`).join('') + `</div>`;
-  h += `<p class="note" style="margin-top:12px">Built by greedily pairing the highest-synergy cards around your win condition, keeping the deck legal (a spell, a cheap cycle card, at most one building). Swaps preserve each card's role so the deck still functions. Synergy is from public games — never from private scouting data.</p>`;
+  h += `<p class="note" style="margin-top:12px">Built by greedily pairing the highest-synergy cards around your win condition, keeping the deck legal (a spell, a cheap cycle card, at most one building). Swaps preserve each card's role so the deck still functions. Synergy is from public games, never from private scouting data.</p>`;
   return h;
 }
 
@@ -433,7 +448,7 @@ function matrixHeat(l) {
 }
 
 function renderMatrix() {
-  if (!SYN || !SYN.partners) { app().innerHTML = `<h1 class="page">Synergy Map</h1><div class="card"><div class="note">Synergy data is still loading or out of date — try a full refresh (hold Shift and click reload).</div></div>`; return; }
+  if (!SYN || !SYN.partners) { app().innerHTML = `<h1 class="page">Synergy Map</h1><div class="card"><div class="note">Synergy data is still loading or out of date, try a full refresh (hold Shift and click reload).</div></div>`; return; }
   const focus = (window._mxFocus && SYN.partners[window._mxFocus]) ? window._mxFocus : (SYN.partners['Hog Rider'] ? 'Hog Rider' : Object.keys(SYN.partners)[0]);
   const partners = (SYN.partners[focus] || []).slice(0, 11).map(p => p.card);
   const list = [focus].concat(partners);
@@ -446,7 +461,7 @@ function renderMatrix() {
   const picks = ['Hog Rider','Golem','Graveyard','X-Bow','Miner','Lava Hound','Balloon','Mega Knight'].filter(c => SYN.partners[c]);
 
   let html = `<h1 class="page">Synergy Map</h1>
-    <p class="sub">A card's closest partners — and how they pair with <em>each other</em>. Each cell is the "lift" between two cards (how much better they do together than apart), from ${SYN.games_analyzed.toLocaleString()} competitive games. Blue is strong synergy, red is anti-synergy; the diagonal is each card's solo win rate.</p>
+    <p class="sub">A card's closest partners, and how they pair with <em>each other</em>. Each cell is the "lift" between two cards (how much better they do together than apart), from ${SYN.games_analyzed.toLocaleString()} competitive games. Blue is strong synergy, red is anti-synergy; the diagonal is each card's solo win rate.</p>
     <div class="tree-start"><input id="mxInput" list="mxlist" placeholder="Search any card to centre the map…" spellcheck="false">
       <datalist id="mxlist">${Object.keys(SYN.partners).sort().map(c => `<option value="${esc(c)}">`).join('')}</datalist></div>
     <div class="seedgrid" style="margin-bottom:4px">${picks.map(c => `<button class="seed${c===focus?' on':''}" data-mx="${esc(c)}">${cardImg(c,20)}${esc(c)}</button>`).join('')}</div>
@@ -456,16 +471,16 @@ function renderMatrix() {
   list.forEach(r => {
     html += `<tr><th class="rowh">${cardImg(r,20)}<span>${esc(r)}</span></th>`;
     list.forEach(c => {
-      if (r === c) { const w = (SYN.cards[r] || {}).wr; html += `<td class="mx-diag" data-tip="${esc(r)} — ${w != null ? w + '% solo win rate' : 'no solo data'}">${w != null ? Math.round(w) : '·'}</td>`; return; }
+      if (r === c) { const w = (SYN.cards[r] || {}).wr; html += `<td class="mx-diag" data-tip="${esc(r)}, ${w != null ? w + '% solo win rate' : 'no solo data'}">${w != null ? Math.round(w) : '·'}</td>`; return; }
       const e = liftOf(r, c);
-      if (!e) { html += `<td class="empty" data-tip="${esc(r)} + ${esc(c)} — no strong pairing recorded">·</td>`; return; }
+      if (!e) { html += `<td class="empty" data-tip="${esc(r)} + ${esc(c)}, no strong pairing recorded">·</td>`; return; }
       const col = matrixHeat(e.lift);
-      html += `<td data-bg="${col.bg}" data-fg="${col.fg}" data-tip="${esc(r)} + ${esc(c)} — ${e.lift >= 0 ? '+' : ''}${e.lift} lift · ${e.wr}% win · ${e.games}g">${e.lift >= 0 ? '+' : ''}${e.lift}</td>`;
+      html += `<td data-bg="${col.bg}" data-fg="${col.fg}" data-tip="${esc(r)} + ${esc(c)}, ${e.lift >= 0 ? '+' : ''}${e.lift} lift · ${e.wr}% win · ${e.games}g">${e.lift >= 0 ? '+' : ''}${e.lift}</td>`;
     });
     html += `</tr>`;
   });
   html += `</tbody></table></div></div>
-    <p class="note" style="margin-top:10px">The first row and column are ${esc(focus)} with each partner. The inner cells show which of those partners also synergise with <em>each other</em> — a tight block of blue is a mini-archetype. Hover any cell for the exact numbers.</p>`;
+    <p class="note" style="margin-top:10px">The first row and column are ${esc(focus)} with each partner. The inner cells show which of those partners also synergise with <em>each other</em>, a tight block of blue is a mini-archetype. Hover any cell for the exact numbers.</p>`;
   app().innerHTML = html;
   app().querySelectorAll('td[data-bg]').forEach(td => { td.style.background = td.dataset.bg; td.style.color = td.dataset.fg; });
   app().querySelectorAll('td[data-tip]').forEach(td => bindTip(td, td.dataset.tip));
@@ -479,7 +494,7 @@ function renderMatrix() {
 function warResultHtml(eng, d) {
   const owned = d.cards.map(c => ({ name: c.name, level: c.level, maxLevel: c.maxLevel, evolutionLevel: c.evolutionLevel }));
   const decks = eng.warDecks(owned, 4);
-  if (!decks.length) return `<div class="card"><div class="note">Couldn't build four full decks from this collection — not enough distinct cards.</div></div>`;
+  if (!decks.length) return `<div class="card"><div class="note">Couldn't build four full decks from this collection, not enough distinct cards.</div></div>`;
   const om = {}; d.cards.forEach(c => { om[c.name] = c; });
   const evoTotal = decks.reduce((a, x) => a + x.evolutions, 0);
   let h = `<div class="statrow" style="margin:2px 0 16px">
@@ -487,7 +502,7 @@ function warResultHtml(eng, d) {
       <div class="stat"><div class="v mono">${evoTotal}</div><div class="k">evolutions used</div></div>
       <div class="stat"><div class="v mono">${d.cardsOwned}</div><div class="k">cards owned</div></div>
     </div>`;
-  h += decks.map((dk, i) => `<h2 class="sec">Deck ${i + 1} — ${esc(dk.seed)}
+  h += decks.map((dk, i) => `<h2 class="sec">Deck ${i + 1}, ${esc(dk.seed)}
       <span class="note" style="font-weight:500">· ${dk.avgElixir.toFixed(1)} avg elixir · ${Math.round(dk.avgLevelFrac * 100)}% leveled · ${dk.evolutions} evo</span></h2>
     <div class="cardgrid bld-grid">${dk.cards.map(c => ccard(om[c] || { name: c })).join('')}</div>`).join('');
   h += `<p class="note" style="margin-top:14px">Each deck uses only cards you own, no card appears in two decks, and the picks are weighted toward your higher-level and evolved copies as well as synergy. Reads only your public account; synergy is from public games, never private scouting data.</p>`;
@@ -495,16 +510,16 @@ function warResultHtml(eng, d) {
 }
 
 function renderWar() {
-  if (!SYN || !window.DeckBuilder) { app().innerHTML = `<h1 class="page">War Deck Builder</h1><div class="card"><div class="note">Synergy data is still loading or out of date — try a full refresh (hold Shift and click reload).</div></div>`; return; }
+  if (!SYN || !window.DeckBuilder) { app().innerHTML = `<h1 class="page">War Deck Builder</h1><div class="card"><div class="note">Synergy data is still loading or out of date, try a full refresh (hold Shift and click reload).</div></div>`; return; }
   if (!CONFIG.apiBase) { app().innerHTML = `<h1 class="page">War Deck Builder</h1><div class="card"><div class="note">The lookup service isn't connected yet.</div></div>`; return; }
   const eng = bEngine();
   const tag = window._warTag || '', d = window._warData, err = window._warErr, loading = window._warLoading;
   let body = '';
-  if (loading) body = `<div class="card"><div class="note">Looking up ${esc(tag)}…</div></div>`;
+  if (loading) body = skelDeck('Building war decks for ' + tag + '…');
   else if (err) body = `<div class="card"><div class="note" style="color:var(--lose)">${esc(err)}</div></div>`;
   else if (d) body = warResultHtml(eng, d);
   app().innerHTML = `<h1 class="page">War Deck Builder</h1>
-    <p class="sub">Enter your player tag for four Clan War decks built from cards you own — no card reused across decks, weighted toward your maxed and evolved copies and the synergies that win. Reads only your public account.</p>
+    <p class="sub">Enter your player tag for four Clan War decks built from cards you own, no card reused across decks, weighted toward your maxed and evolved copies and the synergies that win. Reads only your public account.</p>
     <form class="labsearch" id="warForm" autocomplete="off"><input id="warInput" placeholder="#YOURTAG" value="${esc(tag)}" maxlength="16" spellcheck="false"><button type="submit">Build war decks</button></form>${body}`;
   document.getElementById('warForm').addEventListener('submit', async e => {
     e.preventDefault(); const v = document.getElementById('warInput').value.trim(); if (!v) return;
@@ -514,6 +529,70 @@ function renderWar() {
     catch (x) { window._warLoading = false; window._warErr = 'Could not reach the lookup service.'; }
     renderWar();
   });
+}
+
+/* ============================ LEGAL PAGES ============================ */
+const CONTACT = 'https://github.com/ClashLabs/ClashLabs.github.io/issues';
+
+function renderPrivacy() {
+  app().innerHTML = `<h1 class="page">Privacy Policy</h1><div class="legal">
+    <p class="updated">Last updated 15 October 2026</p>
+    <p>ClashLabs is a free, unofficial Clash Royale fan project. There are no accounts and no sign-in. This page explains the small amount of data the site touches.</p>
+
+    <h2>What we handle</h2>
+    <p>When you enter a player tag in the Deck Lab or War Deck Builder, that tag is sent to our own lookup service (a Cloudflare Worker), which fetches your <b>public</b> Clash Royale profile and recent battles from Supercell's official API. We never ask for your name, email, or any password.</p>
+
+    <h2>What we store</h2>
+    <p>To power the site's stats, recent <b>public</b> battles from looked-up and tracked players are saved in our database (Cloudflare D1), and the public stats files are built from public competitive battles. The only information involved is your public in-game tag and public battle records, which anyone can already read from the official API. We do not store anything that identifies you off the game, because we never collect it.</p>
+
+    <h2>Cookies and tracking</h2>
+    <p>No ads, no analytics, no tracking cookies, no third-party scripts. The only things kept in your browser are your light/dark theme choice and a flag for whether you have seen the tour. Both are functional only and never leave your device.</p>
+
+    <h2>Keeping and removing data</h2>
+    <p>Public battle data is kept so the stats stay accurate over time. If you would like a specific player tag's cached data removed, <a href="${CONTACT}" rel="noopener noreferrer" target="_blank">open a request on our GitHub</a> and we will remove it.</p>
+
+    <h2>Younger players</h2>
+    <p>Many Clash Royale players are children. ClashLabs only ever handles a public player tag and public battle data; it does not collect personal details, and it has no accounts, chat, or payments. A parent or guardian who wants a tag removed can use the contact above.</p>
+
+    <h2>Who else is involved</h2>
+    <ul>
+      <li><b>Supercell</b>, the official Clash Royale API (game data) and card images.</li>
+      <li><b>Cloudflare</b>, hosts the lookup service and the database.</li>
+      <li><b>GitHub</b>, hosts the website.</li>
+    </ul>
+    <p>Each of these has its own privacy terms.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the date at the top will change with it.</p>
+
+    <p class="disclaimer">This is a plain-language summary for a hobby project, not legal advice. Privacy rules vary by country; please check an official source if you need certainty.</p>
+    <p style="margin-top:14px"><a href="#/terms">Terms of Service →</a></p>
+  </div>`;
+}
+
+function renderTerms() {
+  app().innerHTML = `<h1 class="page">Terms of Service</h1><div class="legal">
+    <p class="updated">Last updated 15 October 2026</p>
+    <p>ClashLabs is a free, unofficial, fan-made tool. By using it you agree to the following.</p>
+
+    <h2>Not affiliated with Supercell</h2>
+    <p>ClashLabs is not created, endorsed, or sponsored by Supercell. Clash Royale and all related names, cards, and images are the property of Supercell. The site follows Supercell's Fan Content Policy; game data and assets are used under that policy and the Clash Royale API terms.</p>
+
+    <h2>Provided "as is"</h2>
+    <p>The stats, synergies, and suggested decks are generated from public game data and come with no warranty. They may be incomplete, out of date, or wrong. Treat them as one input for fun, not a guarantee of results.</p>
+
+    <h2>Fair use</h2>
+    <p>Please use the site for personal, non-commercial purposes, and don't try to overload or abuse the lookup service.</p>
+
+    <h2>Availability</h2>
+    <p>This is a hobby project. It may change, break, or be shut down at any time, without notice.</p>
+
+    <h2>Contact</h2>
+    <p>Questions or requests: <a href="${CONTACT}" rel="noopener noreferrer" target="_blank">open an issue on our GitHub</a>.</p>
+
+    <p class="disclaimer">This is a plain-language summary for a hobby project, not legal advice.</p>
+    <p style="margin-top:14px"><a href="#/privacy">Privacy Policy →</a></p>
+  </div>`;
 }
 
 /* ============================ ROUTER ============================ */
@@ -531,6 +610,8 @@ function render() {
     else if (route==='lab') renderDeckLab();
     else if (route==='finalists') renderFinalists();
     else if (route==='how') renderHow();
+    else if (route==='privacy') renderPrivacy();
+    else if (route==='terms') renderTerms();
     else renderHome();
   } catch(e){ app().innerHTML = `<p class="note">Something went wrong.</p>`; console.error(e); }
   scrollTo(0,0);

@@ -1,4 +1,4 @@
-/* ClashLabs — guided tour.
+/* ClashLabs, guided tour.
    Self-contained: injects its own CSS, draws a bottom card + moving spotlight,
    walks the visitor through each section, and puts any in-progress state back
    exactly as it was when the tour closes. No external dependencies. */
@@ -184,7 +184,7 @@
   /* ======================= CLASHLABS CONFIG ======================= */
   var hash = function (h) { if (location.hash !== h) location.hash = h; };
 
-  // A clearly-fictional example collection for the Deck Lab demo — no live API call.
+  // A clearly-fictional example collection for the Deck Lab demo, no live API call.
   // Chosen so several real top-pairs and a couple of evolutions always render.
   var DEMO = {
     name: 'Example Player', cardsOwned: 110,
@@ -227,7 +227,7 @@
     steps: [
       { group: 'Welcome', title: 'Welcome to ClashLabs', target: null,
         nav: function () { hash('#/'); },
-        text: 'A quick tour of the site. ClashLabs turns a large sample of competitive 1v1 games into card-synergy tools and stats on the CRL World Finalists. Use <b>Next</b> / <b>Back</b> or the arrow keys, and <b>Esc</b> to leave any time — nothing you were doing is lost.' },
+        text: 'A quick tour of the site. ClashLabs turns a large sample of competitive 1v1 games into card-synergy tools and stats on the CRL World Finalists. Use <b>Next</b> / <b>Back</b> or the arrow keys, and <b>Esc</b> to leave any time, nothing you were doing is lost.' },
 
       { group: 'Navigate', title: 'Everything lives up here', target: 'header .main', pad: 4,
         nav: function () { hash('#/'); },
@@ -236,22 +236,22 @@
       { group: 'Synergy Tree', title: 'Start from a win condition', target: '.seedgrid, .tree-start',
         nav: function () { hash('#/tree'); },
         setup: function () { window._line = []; if (typeof render === 'function') render(); },
-        text: 'The Synergy Tree works like a chess opening tree, but for decks: pick a win condition and follow the branches. Built from <b>182,611</b> competitive 1v1 games — real outcomes, not opinion.' },
+        text: 'The Synergy Tree works like a chess opening tree, but for decks: pick a win condition and follow the branches. Built from <b>182,611</b> competitive 1v1 games, real outcomes, not opinion.' },
 
       { group: 'Synergy Tree', title: 'Win rate and "lift"', target: '.branches',
         nav: function () { hash('#/tree'); },
         setup: function () { window._line = [{ card: 'Hog Rider', wr: (SYN && SYN.cards['Hog Rider'] && SYN.cards['Hog Rider'].wr) || null, lift: null }]; if (typeof render === 'function') render(); },
-        text: 'Seeded with <b>Hog Rider</b>. Each branch shows how often that pairing <b>wins</b> and its <b>lift</b> — how much better two cards do together than apart. High lift is genuine synergy, not just two strong cards sharing a slot.' },
+        text: 'Seeded with <b>Hog Rider</b>. Each branch shows how often that pairing <b>wins</b> and its <b>lift</b>, how much better two cards do together than apart. High lift is genuine synergy, not just two strong cards sharing a slot.' },
 
       { group: 'Deck Lab', title: 'Build around what you own', target: '#labForm',
         nav: function () { hash('#/lab'); },
         setup: function () { window._labData = null; window._labErr = null; window._labLoading = false; window._labTag = ''; if (typeof render === 'function') render(); },
-        text: 'The Deck Lab reads <b>only your public account</b> from your player tag — your collection, your evolutions, and the strongest card pairs you can actually build right now.' },
+        text: 'The Deck Lab reads <b>only your public account</b> from your player tag, your collection, your evolutions, and the strongest card pairs you can actually build right now.' },
 
       { group: 'Deck Lab', title: 'Your strongest pairs', target: '.synlist',
         nav: function () { hash('#/lab'); },
         setup: function () { window._labData = DEMO; window._labErr = null; window._labLoading = false; window._labTag = '#EXAMPLE'; if (typeof render === 'function') render(); },
-        text: 'An <b>example</b> result (not a real account). Each pair is scored by win rate and lift, so you can see which of your cards genuinely work together — and which evolutions pull their weight.' },
+        text: 'An <b>example</b> result (not a real account). Each pair is scored by win rate and lift, so you can see which of your cards genuinely work together, and which evolutions pull their weight.' },
 
       { group: 'World Finalists', title: 'The 16 at Worlds', target: '.tbl',
         nav: function () { hash('#/finalists'); },
@@ -261,7 +261,7 @@
       { group: 'World Finalists', title: 'Head-to-head heatmap', target: '.heat',
         nav: function () { hash('#/finalists'); },
         setup: function () { finClickTab('h2h'); },
-        text: 'The <b>Head-to-Head</b> grid shows every finalist against every other — <b>blue</b> is a winning record, <b>red</b> a losing one, graded by win rate. Hover any cell for the exact record.' },
+        text: 'The <b>Head-to-Head</b> grid shows every finalist against every other, <b>blue</b> is a winning record, <b>red</b> a losing one, graded by win rate. Hover any cell for the exact record.' },
 
       { group: 'Finish', title: 'That’s the tour', target: null,
         nav: function () { hash('#/how'); },
