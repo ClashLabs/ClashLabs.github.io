@@ -1,0 +1,43 @@
+name: Refresh meta decks
+
+# Builds data/meta_decks.json for the War Deck Builder from the OFFICIAL Clash Royale API
+# (top ladder players, via the RoyaleAPI proxy). Public meta only — never the scout archive.
+# Runs weekly and on demand. Public repo = free Actions minutes.
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'      # Mondays 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch top-ladder meta decks (official API via proxy)
+        env:
+          CR_API_TOKEN: ${{ secrets.CR_API_TOKEN }}   # token whitelisted to the RoyaleAPI proxy IP
+          CR_API_BASE: https://proxy.royaleapi.dev/v1
+          OUT: data/meta_decks.json
+          N_PLAYERS: '200'
+        run: python fetch_meta_decks.py
+
+      - name: Commit meta_decks.json if it changed
+        run: |
+          if [ -n "$(git status --porcelain data/meta_decks.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/meta_decks.json
+            git commit -m "Refresh live meta decks"
+            git push
+          else
+            echo "meta_decks.json unchanged — nothing to commit."
+          fi
