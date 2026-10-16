@@ -233,10 +233,80 @@
       return decks;
     }
 
+    // Best label for a deck: its win condition, else its priciest non-spell troop.
+    function primaryWincon(deckCards) {
+      for (var i = 0; i < deckCards.length; i++) if (WIN_SET[deckCards[i]]) return deckCards[i];
+      var t = deckCards.filter(function (c) { return roleOf(c) !== 'spell'; })
+        .sort(function (a, b) { return elixir(b) - elixir(a); })[0];
+      return t || deckCards[0];
+    }
+
+    // --- F4 rebuilt: real meta decks first, synergy only as a fallback ---
+    // owned: [{name,level,maxLevel,evolutionLevel}]; metaDecks: array of {cards, evo?, count?, winrate?}
+    function warDecksMeta(owned, metaDecks, maxDecks) {
+      maxDecks = maxDecks || 4;
+      var ownMap = {}; owned.forEach(function (o) { if (cards[o.name]) ownMap[o.name] = o; });
+      var ownedNames = Object.keys(ownMap);
+      function levelFrac(o) { return (o && o.maxLevel) ? Math.max(0, Math.min(1, (o.level || 0) / o.maxLevel)) : 0.5; }
+      function fit(dc) {
+        var ow = 0, lvl = 0, evo = 0;
+        dc.forEach(function (c) { var o = ownMap[c]; if (o) { ow++; lvl += levelFrac(o); if (o.evolutionLevel > 0) evo++; } });
+        return { complete: ow === 8, ownedCount: ow, avgLvl: lvl / 8, evoHit: evo };
+      }
+      var LEVEL_OK = 0.80;                       // ~level 11-12/14: "well enough leveled to run"
+      var used = {}, result = [];
+
+      var cand = (metaDecks || []).map(function (d) { return { d: d, fit: fit(d.cards) }; })
+        .filter(function (x) { return x.fit.complete; });
+      function metaStrength(x) {
+        var pop = x.d.count ? Math.log(1 + x.d.count) * 4 : 0;
+        var wr = (x.d.winrate != null) ? (x.d.winrate - 50) : 0;
+        return pop + wr + x.fit.avgLvl * 25 + x.fit.evoHit * 4;
+      }
+      function metaResult(x) {
+        var lvl = 0, evo = 0;
+        x.d.cards.forEach(function (c) { var o = ownMap[c]; if (o) { lvl += levelFrac(o); if (o.evolutionLevel > 0) evo++; } });
+        return { seed: primaryWincon(x.d.cards), cards: x.d.cards.slice(), source: 'meta',
+                 count: x.d.count || null, winrate: (x.d.winrate != null ? x.d.winrate : null),
+                 avgLevelFrac: lvl / 8, evolutions: evo };
+      }
+      function synergyFromOwned() {
+        var seeds = ownedNames.filter(function (n) { return WIN_SET[n] && !used[n]; })
+          .sort(function (a, b) { return levelFrac(ownMap[b]) - levelFrac(ownMap[a]); });
+        var seed = seeds[0] || ownedNames.filter(function (n) { return !used[n]; })
+          .sort(function (a, b) { return levelFrac(ownMap[b]) - levelFrac(ownMap[a]); })[0];
+        var pool = ownedNames.filter(function (n) { return !used[n]; });
+        if (!seed || pool.length < 8) return null;
+        var deck = buildDeck(seed, [], { pool: pool, weight: function (c) { var o = ownMap[c]; return o ? levelFrac(o) * 6 + (o.evolutionLevel > 0 ? 5 : 0) : -999; } });
+        if (deck.length < 8) return null;
+        var lvl = 0, evo = 0; deck.forEach(function (c) { var o = ownMap[c]; if (o) { lvl += levelFrac(o); if (o.evolutionLevel > 0) evo++; } });
+        return { seed: seed, cards: deck, source: 'synergy', avgLevelFrac: lvl / 8, evolutions: evo };
+      }
+
+      while (result.length < maxDecks) {
+        var avail = cand.filter(function (x) { return x.d.cards.every(function (c) { return !used[c]; }); });
+        avail.sort(function (a, b) { return metaStrength(b) - metaStrength(a); });
+        var bestMeta = avail[0] || null, chosen = null;
+
+        if (bestMeta && bestMeta.fit.avgLvl >= LEVEL_OK) {
+          chosen = metaResult(bestMeta);                       // own it and leveled: use the real deck
+        } else {
+          var syn = synergyFromOwned();                        // your meta copies are low — compare a synergy deck from your best cards
+          if (bestMeta && (!syn || bestMeta.fit.avgLvl >= syn.avgLevelFrac - 0.08)) chosen = metaResult(bestMeta);
+          else if (syn) chosen = syn;
+          else if (bestMeta) chosen = metaResult(bestMeta);
+        }
+        if (!chosen) break;
+        chosen.cards.forEach(function (c) { used[c] = 1; });
+        result.push(chosen);
+      }
+      return result;
+    }
+
     return {
-      buildDeck: buildDeck, swaps: swaps, deckPairs: deckPairs, warDecks: warDecks,
-      avgElixir: avgElixir, roleOf: roleOf, fineRole: fineRole, lift: lift, affinity: affinity,
-      elixir: elixir, wr: wr, all: ALL
+      buildDeck: buildDeck, swaps: swaps, deckPairs: deckPairs, warDecks: warDecks, warDecksMeta: warDecksMeta,
+      avgElixir: avgElixir, roleOf: roleOf, fineRole: fineRole, primaryWincon: primaryWincon,
+      lift: lift, affinity: affinity, elixir: elixir, wr: wr, all: ALL
     };
   }
 

@@ -1,0 +1,12 @@
+{"source":"seed","generated":"2026-10-16","note":"Starter archetype set — real decks, not live usage data. Replaced by current meta when fetch_meta_decks.py is run.","decks":[
+{"cards":["Hog Rider","Musketeer","Ice Golem","Cannon","Skeletons","Ice Spirit","Fireball","The Log"]},
+{"cards":["X-Bow","Tesla","Archers","Knight","Ice Spirit","Skeletons","Fireball","The Log"]},
+{"cards":["Lava Hound","Balloon","Flying Machine","Mega Minion","Minions","Tombstone","Fireball","Zap"]},
+{"cards":["Golem","Night Witch","Baby Dragon","Mega Minion","Lumberjack","Lightning","Tornado","Barbarian Barrel"]},
+{"cards":["Royal Giant","Fisherman","Mother Witch","Hunter","Lightning","Electro Spirit","Skeletons","Barbarian Barrel"]},
+{"cards":["Graveyard","Poison","Knight","Ice Wizard","Tombstone","Baby Dragon","Barbarian Barrel","Archers"]},
+{"cards":["P.E.K.K.A","Battle Ram","Bandit","Royal Ghost","Electro Wizard","Poison","Zap","Minions"]},
+{"cards":["Miner","Wall Breakers","Bomb Tower","Spear Goblins","Skeletons","Ice Spirit","The Log","Fireball"]},
+{"cards":["Mortar","Goblin Barrel","Princess","Goblin Gang","Knight","Ice Spirit","Rocket","The Log"]},
+{"cards":["Royal Hogs","Royal Recruits","Flying Machine","Fisherman","Earthquake","Barbarian Barrel","Zappies","Electro Spirit"]}
+]}

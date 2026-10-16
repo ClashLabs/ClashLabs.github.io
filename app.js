@@ -493,19 +493,41 @@ function renderMatrix() {
 /* ============================ WAR DECK BUILDER (F4) ============================ */
 function warResultHtml(eng, d) {
   const owned = d.cards.map(c => ({ name: c.name, level: c.level, maxLevel: c.maxLevel, evolutionLevel: c.evolutionLevel }));
-  const decks = eng.warDecks(owned, 4);
-  if (!decks.length) return `<div class="card"><div class="note">Couldn't build four full decks from this collection, not enough distinct cards.</div></div>`;
+  const meta = (DATA.meta_decks && DATA.meta_decks.decks) || [];
+  const decks = eng.warDecksMeta(owned, meta, 4);
+  if (!decks.length) return `<div class="card"><div class="note">Couldn't build four decks from this collection.</div></div>`;
   const om = {}; d.cards.forEach(c => { om[c.name] = c; });
-  const evoTotal = decks.reduce((a, x) => a + x.evolutions, 0);
-  let h = `<div class="statrow" style="margin:2px 0 16px">
+  const metaN = decks.filter(x => x.source === 'meta').length;
+  const src = DATA.meta_decks
+    ? (DATA.meta_decks.source === 'live'
+        ? `live ladder meta (${(DATA.meta_decks.sample_games || 0).toLocaleString()} games, ${DATA.meta_decks.generated})`
+        : 'a starter set of real meta decks')
+    : 'synergy only (meta decks not loaded)';
+  let h = `<div class="statrow" style="margin:2px 0 12px">
       <div class="stat"><div class="v mono">${decks.length}</div><div class="k">war decks</div></div>
-      <div class="stat"><div class="v mono">${evoTotal}</div><div class="k">evolutions used</div></div>
+      <div class="stat"><div class="v mono">${metaN}</div><div class="k">meta decks</div></div>
       <div class="stat"><div class="v mono">${d.cardsOwned}</div><div class="k">cards owned</div></div>
-    </div>`;
-  h += decks.map((dk, i) => `<h2 class="sec">Deck ${i + 1}, ${esc(dk.seed)}
-      <span class="note" style="font-weight:500">· ${dk.avgElixir.toFixed(1)} avg elixir · ${Math.round(dk.avgLevelFrac * 100)}% leveled · ${dk.evolutions} evo</span></h2>
-    <div class="cardgrid bld-grid">${dk.cards.map(c => ccard(om[c] || { name: c })).join('')}</div>`).join('');
-  h += `<p class="note" style="margin-top:14px">Each deck uses only cards you own, no card appears in two decks, and the picks are weighted toward your higher-level and evolved copies as well as synergy. Reads only your public account; synergy is from public games, never private scouting data.</p>`;
+    </div>
+    <p class="note" style="margin:-4px 0 14px">Decks chosen from ${src}, matched to the cards you own and how well they're leveled. No card is reused across your four decks.</p>`;
+  h += decks.map((dk, i) => {
+    const avgE = eng.avgElixir(dk.cards).toFixed(1);
+    const lvl = Math.round((dk.avgLevelFrac || 0) * 100);
+    const badge = dk.source === 'meta' ? `<span class="src-meta">META</span>` : `<span class="src-syn">SYNERGY</span>`;
+    let stats = '';
+    if (dk.source === 'meta') {
+      const bits = [];
+      if (dk.winrate != null) bits.push(dk.winrate + '% ladder win');
+      if (dk.count != null) bits.push(dk.count.toLocaleString() + ' games');
+      if (bits.length) stats = ' · ' + bits.join(' · ');
+    }
+    const note = dk.source === 'synergy'
+      ? `<div class="note" style="margin:2px 0 6px">No well-leveled meta deck fits here without reusing a card, so this one is built from your strongest cards.</div>` : '';
+    return `<h2 class="sec" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">Deck ${i + 1} · ${esc(dk.seed)} ${badge}
+        <span class="note" style="font-weight:500">· ${avgE} avg elixir · ${lvl}% leveled · ${dk.evolutions} evo${stats}</span></h2>
+      ${note}
+      <div class="cardgrid bld-grid">${dk.cards.map(c => ccard(om[c] || { name: c })).join('')}</div>`;
+  }).join('');
+  h += `<p class="note" style="margin-top:14px">Reads only your public account. Meta decks come from public ladder data via the official Clash Royale API, never from private scouting data. The synergy fallback uses the public game sample.</p>`;
   return h;
 }
 
@@ -519,7 +541,7 @@ function renderWar() {
   else if (err) body = `<div class="card"><div class="note" style="color:var(--lose)">${esc(err)}</div></div>`;
   else if (d) body = warResultHtml(eng, d);
   app().innerHTML = `<h1 class="page">War Deck Builder</h1>
-    <p class="sub">Enter your player tag for four Clan War decks built from cards you own, no card reused across decks, weighted toward your maxed and evolved copies and the synergies that win. Reads only your public account.</p>
+    <p class="sub">Enter your player tag for four Clan War decks picked from real top ladder decks you can field, no card reused across decks, matched to how leveled and evolved your copies are. When your meta-deck cards are too low-level, it falls back to a deck built from your strongest cards. Reads only your public account.</p>
     <form class="labsearch" id="warForm" autocomplete="off"><input id="warInput" placeholder="#YOURTAG" value="${esc(tag)}" maxlength="16" spellcheck="false"><button type="submit">Build war decks</button></form>${body}`;
   document.getElementById('warForm').addEventListener('submit', async e => {
     e.preventDefault(); const v = document.getElementById('warInput').value.trim(); if (!v) return;
@@ -641,6 +663,7 @@ async function boot() {
     document.getElementById('footgen').textContent = ' · Updated '+DATA.meta.generated;
     const cfg = await loadJSON('config.json', true); if (cfg) CONFIG = cfg;
     SYN = await loadJSON('synergy.json', true);
+    DATA.meta_decks = await loadJSON('meta_decks.json', true);
     addEventListener('hashchange', render); render();
   } catch(e){ app().innerHTML = '<p class="note">Could not load data.</p>'; console.error(e); }
 }
