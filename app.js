@@ -668,3 +668,8 @@ async function boot() {
   } catch(e){ app().innerHTML = '<p class="note">Could not load data.</p>'; console.error(e); }
 }
 boot();
+
+/* PWA: register the service worker so the site is installable + works offline. */
+if ('serviceWorker' in navigator) {
+  addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
+}
